@@ -22,7 +22,7 @@ This is the target/reference architecture. Actual deployment choices and integra
 
 ## 2. High-Level Architecture Diagram
 
-![Production DevOps Platform Architecture](diagrams/high-level-architecture.svg)
+![Production DevOps Platform Architecture](diagrams/high-level-architecture.png)
 
 ## 3. Architecture Components
 
