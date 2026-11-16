@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+<defs>
+ <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#536579"/></marker>
+ <marker id="o" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#e87524"/></marker>
+ <marker id="p" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#7952a3"/></marker>
+ <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#388b45"/></marker>
+ <style>
+ text{font-family:Arial,Helvetica,sans-serif;fill:#172b4d}.title{font-size:30px;font-weight:700}.sub{font-size:14px;fill:#536579}
+ .section{font-size:18px;font-weight:700}.head{font-size:14px;font-weight:700}.body{font-size:12px}.tiny{font-size:10px;fill:#536579}
+ .arr{fill:none;stroke:#536579;stroke-width:2.2;marker-end:url(#a)}.orange{fill:none;stroke:#e87524;stroke-width:2.5;marker-end:url(#o)}
+ .purple{fill:none;stroke:#7952a3;stroke-width:2.5;marker-end:url(#p)}.green{fill:none;stroke:#388b45;stroke-width:2.5;marker-end:url(#g)}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="900" y="42" text-anchor="middle" class="title">production-devops-platform — CI/CD Architecture</text>
+<text x="900" y="68" text-anchor="middle" class="sub">GitHub Actions CI | Security gates | Amazon ECR | GitOps repository | Argo CD delivery</text>
+
+<!-- Developer and source -->
+<rect x="30" y="150" width="190" height="180" rx="13" fill="#f7faff" stroke="#6c9bd1" stroke-width="1.8"/>
+<circle cx="125" cy="205" r="22" fill="none" stroke="#2874c8" stroke-width="2.5"/>
+<path d="M83 270 Q85 232 125 232 Q165 232 167 270" fill="none" stroke="#2874c8" stroke-width="2.5"/>
+<text x="125" y="300" text-anchor="middle" class="head">Developer</text>
+
+<rect x="270" y="130" width="250" height="220" rx="14" fill="#fff8f1" stroke="#e87524" stroke-width="1.8"/>
+<circle cx="315" cy="175" r="22" fill="#24292f"/>
+<path d="M303 178 Q301 164 314 162 Q328 161 328 175 L325 185 L319 181 L317 191 L310 191 L310 181 L304 185Z" fill="#fff"/>
+<text x="375" y="181" class="section">GitHub</text>
+<rect x="295" y="215" width="200" height="55" rx="8" fill="#fff" stroke="#e87524"/>
+<path d="M312 230 H338 V255 H312Z M318 237 L312 243 L318 249 M332 237 L338 243 L332 249" fill="none" stroke="#e87524" stroke-width="2"/>
+<text x="410" y="239" class="head">Application Repo</text><text x="410" y="257" class="tiny">Source code / Dockerfile</text>
+<text x="395" y="310" text-anchor="middle" class="tiny">Push / Pull Request / Merge</text>
+
+<!-- CI pipeline -->
+<rect x="570" y="105" width="610" height="690" rx="16" fill="#fffaf5" stroke="#e87524" stroke-width="2"/>
+<text x="875" y="140" text-anchor="middle" class="section">CI — GitHub Actions Workflow</text>
+<!-- runner -->
+<rect x="600" y="160" width="550" height="55" rx="9" fill="#fff0e5" stroke="#e87524"/>
+<circle cx="635" cy="187" r="17" fill="#e87524"/><path d="M626 187 L633 194 L645 179" fill="none" stroke="#fff" stroke-width="2.5"/>
+<text x="880" y="184" text-anchor="middle" class="head">Workflow Trigger &amp; Runner</text><text x="880" y="202" text-anchor="middle" class="tiny">Push / PR • Ubuntu runner • workflow permissions</text>
+
+<!-- pipeline stages -->
+<g>
+ <rect x="600" y="240" width="550" height="66" rx="9" fill="#fff" stroke="#e87524"/>
+ <circle cx="635" cy="273" r="17" fill="#fff0e5" stroke="#e87524" stroke-width="2"/><text x="635" y="278" text-anchor="middle" class="head">1</text>
+ <text x="880" y="267" text-anchor="middle" class="head">Checkout &amp; Dependency Setup</text><text x="880" y="287" text-anchor="middle" class="tiny">Checkout code • install dependencies • cache where appropriate</text>
+ <rect x="600" y="325" width="550" height="66" rx="9" fill="#fff" stroke="#e87524"/>
+ <circle cx="635" cy="358" r="17" fill="#fff0e5" stroke="#e87524" stroke-width="2"/><text x="635" y="363" text-anchor="middle" class="head">2</text>
+ <text x="880" y="352" text-anchor="middle" class="head">Build &amp; Automated Tests</text><text x="880" y="372" text-anchor="middle" class="tiny">Compile / package • unit tests • integration tests as configured</text>
+ <rect x="600" y="410" width="550" height="90" rx="9" fill="#fff" stroke="#d49a45"/>
+ <circle cx="635" cy="455" r="17" fill="#fff4df" stroke="#d49a45" stroke-width="2"/><text x="635" y="460" text-anchor="middle" class="head">3</text>
+ <text x="880" y="438" text-anchor="middle" class="head">Code &amp; Dependency Security Gates</text>
+ <text x="880" y="460" text-anchor="middle" class="body">SonarQube • dependency / secret scanning</text>
+ <text x="880" y="480" text-anchor="middle" class="tiny">Quality gate must pass before image publication</text>
+ <rect x="600" y="520" width="550" height="90" rx="9" fill="#fff" stroke="#d49a45"/>
+ <circle cx="635" cy="565" r="17" fill="#fff4df" stroke="#d49a45" stroke-width="2"/><text x="635" y="570" text-anchor="middle" class="head">4</text>
+ <text x="880" y="548" text-anchor="middle" class="head">Container Build &amp; Security Scan</text>
+ <text x="880" y="570" text-anchor="middle" class="body">Docker build • Trivy image scan • SBOM generation</text>
+ <text x="880" y="590" text-anchor="middle" class="tiny">Reject or hold images according to configured policy</text>
+ <rect x="600" y="630" width="550" height="75" rx="9" fill="#fff0e5" stroke="#e87524"/>
+ <circle cx="635" cy="667" r="17" fill="#e87524"/><text x="635" y="672" text-anchor="middle" fill="#fff" class="head">5</text>
+ <text x="880" y="660" text-anchor="middle" class="head">Authenticate &amp; Publish to Amazon ECR</text>
+ <text x="880" y="682" text-anchor="middle" class="tiny">OIDC role assumption • immutable version tag / digest</text>
+</g>
+
+<!-- GitOps repo -->
+<rect x="1240" y="155" width="245" height="225" rx="14" fill="#f7f2fc" stroke="#7952a3" stroke-width="1.8"/>
+<path d="M1270 183 L1290 171 L1310 183 V207 L1290 219 L1270 207Z" fill="none" stroke="#7952a3" stroke-width="2.5"/>
+<text x="1370" y="195" class="section">GitOps Repo</text>
+<rect x="1265" y="240" width="195" height="48" rx="7" fill="#fff" stroke="#7952a3"/>
+<text x="1362" y="260" text-anchor="middle" class="head">Helm Values</text><text x="1362" y="277" text-anchor="middle" class="tiny">Image tag / digest / config</text>
+<rect x="1265" y="305" width="195" height="48" rx="7" fill="#fff" stroke="#7952a3"/>
+<text x="1362" y="325" text-anchor="middle" class="head">Pull Request / Merge</text><text x="1362" y="342" text-anchor="middle" class="tiny">Review desired-state change</text>
+
+<!-- CD -->
+<rect x="1540" y="155" width="230" height="225" rx="14" fill="#f7f2fc" stroke="#7952a3" stroke-width="1.8"/>
+<circle cx="1590" cy="200" r="22" fill="#7952a3"/>
+<path d="M1578 200 Q1590 180 1602 200 Q1590 220 1578 200Z" fill="none" stroke="#fff" stroke-width="2"/>
+<text x="1660" y="205" text-anchor="middle" class="section">Argo CD</text>
+<rect x="1565" y="245" width="180" height="48" rx="7" fill="#fff" stroke="#7952a3"/>
+<text x="1655" y="265" text-anchor="middle" class="head">Repo Sync</text><text x="1655" y="282" text-anchor="middle" class="tiny">Compare desired / live state</text>
+<rect x="1565" y="310" width="180" height="48" rx="7" fill="#fff" stroke="#7952a3"/>
+<text x="1655" y="330" text-anchor="middle" class="head">Sync / Health</text><text x="1655" y="347" text-anchor="middle" class="tiny">Apply Helm release</text>
+
+<!-- EKS destination -->
+<rect x="1240" y="455" width="530" height="340" rx="15" fill="#f2faf2" stroke="#388b45" stroke-width="2"/>
+<g transform="translate(1270 475)"><path d="M25 0 L48 13 V40 L25 53 L2 40 V13Z" fill="#438b45"/><path d="M25 9 L39 17 V35 L25 44 L11 35 V17Z" fill="none" stroke="#fff" stroke-width="2"/></g>
+<text x="1340" y="510" class="section">Amazon EKS</text>
+<rect x="1270" y="545" width="470" height="70" rx="9" fill="#fff" stroke="#7cab7c"/>
+<text x="1505" y="573" text-anchor="middle" class="head">Kubernetes Deployment</text><text x="1505" y="594" text-anchor="middle" class="tiny">Helm chart • values • image reference</text>
+<rect x="1270" y="635" width="220" height="65" rx="9" fill="#fff" stroke="#7cab7c"/>
+<text x="1380" y="662" text-anchor="middle" class="head">Rolling Update</text><text x="1380" y="682" text-anchor="middle" class="tiny">Readiness-based rollout</text>
+<rect x="1520" y="635" width="220" height="65" rx="9" fill="#fff" stroke="#7cab7c"/>
+<text x="1630" y="662" text-anchor="middle" class="head">Health Validation</text><text x="1630" y="682" text-anchor="middle" class="tiny">Pods / Services / ingress</text>
+<rect x="1270" y="720" width="470" height="48" rx="8" fill="#fff" stroke="#7cab7c"/>
+<text x="1505" y="749" text-anchor="middle" class="body">Rollback: revert GitOps change or restore previous image version</text>
+
+<!-- Feedback and controls -->
+<rect x="570" y="845" width="1200" height="185" rx="14" fill="#f8fafc" stroke="#8a9aab" stroke-width="1.5"/>
+<text x="1170" y="877" text-anchor="middle" class="section">Pipeline Controls &amp; Operational Feedback</text>
+<g>
+ <rect x="600" y="900" width="250" height="85" rx="8" fill="#fff" stroke="#8a9aab"/>
+ <text x="725" y="928" text-anchor="middle" class="head">Artifact Traceability</text><text x="725" y="950" text-anchor="middle" class="tiny">Commit SHA • image digest • build ID</text><text x="725" y="967" text-anchor="middle" class="tiny">Release metadata</text>
+ <rect x="875" y="900" width="250" height="85" rx="8" fill="#fff" stroke="#8a9aab"/>
+ <text x="1000" y="928" text-anchor="middle" class="head">Approvals &amp; Environments</text><text x="1000" y="950" text-anchor="middle" class="tiny">Branch protection • reviewers</text><text x="1000" y="967" text-anchor="middle" class="tiny">Environment promotion rules</text>
+ <rect x="1150" y="900" width="250" height="85" rx="8" fill="#fff" stroke="#8a9aab"/>
+ <text x="1275" y="928" text-anchor="middle" class="head">Secrets &amp; Permissions</text><text x="1275" y="950" text-anchor="middle" class="tiny">OIDC • least privilege • no static keys</text><text x="1275" y="967" text-anchor="middle" class="tiny">Protected variables / secrets</text>
+ <rect x="1425" y="900" width="315" height="85" rx="8" fill="#fff" stroke="#8a9aab"/>
+ <text x="1582" y="928" text-anchor="middle" class="head">Deployment Verification</text><text x="1582" y="950" text-anchor="middle" class="tiny">Argo CD health • rollout status</text><text x="1582" y="967" text-anchor="middle" class="tiny">Metrics / logs / alerts</text>
+</g>
+
+<!-- arrows -->
+<path d="M220 240 H270" class="arr"/>
+<path d="M520 245 H570" class="orange"/>
+<path d="M875 215 V240" class="orange"/>
+<path d="M875 306 V325" class="orange"/>
+<path d="M875 391 V410" class="orange"/>
+<path d="M875 500 V520" class="orange"/>
+<path d="M875 610 V630" class="orange"/>
+<path d="M1150 668 H1195 V265 H1240" class="orange"/>
+<text x="1205" y="440" class="tiny" transform="rotate(-90 1205 440)">Publish image reference / digest</text>
+<path d="M1485 270 H1540" class="purple"/>
+<path d="M1655 380 V420 H1505 V455" class="purple"/>
+<text x="1600" y="410" class="tiny">GitOps sync</text>
+<path d="M1505 615 V635" class="green"/>
+<path d="M1630 700 V720" class="green"/>
+<path d="M1655 795 V845" class="arr"/>
+<path d="M1582 900 V850 H1770 V400" class="arr" stroke-dasharray="5 4"/>
+<text x="850" y="1065" text-anchor="middle" class="tiny">Conceptual target pipeline. Exact workflow jobs, scanning products, approval gates and environment promotion are defined in implementation.</text>
+</svg>
