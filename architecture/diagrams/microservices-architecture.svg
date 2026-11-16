@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1120" viewBox="0 0 1700 1120">
+<defs>
+ <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#388b45"/></marker>
+ <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#2874c8"/></marker>
+ <marker id="p" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#7952a3"/></marker>
+ <marker id="o" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#e87524"/></marker>
+ <style>
+ text{font-family:Arial,Helvetica,sans-serif;fill:#172b4d}.title{font-size:30px;font-weight:700}.sub{font-size:14px;fill:#536579}
+ .section{font-size:19px;font-weight:700}.head{font-size:14px;font-weight:700}.body{font-size:12px}.tiny{font-size:10px;fill:#536579}
+ .green{fill:none;stroke:#388b45;stroke-width:2.5;marker-end:url(#g)}.blue{fill:none;stroke:#2874c8;stroke-width:2.5;marker-end:url(#b)}
+ .purple{fill:none;stroke:#7952a3;stroke-width:2.5;marker-end:url(#p)}.orange{fill:none;stroke:#e87524;stroke-width:2.5;marker-end:url(#o)}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="850" y="42" text-anchor="middle" class="title">production-devops-platform — Microservices Architecture</text>
+<text x="850" y="68" text-anchor="middle" class="sub">Client request flow | 21 independently deployable services | data and asynchronous messaging</text>
+
+<!-- client -->
+<rect x="25" y="140" width="190" height="165" rx="12" fill="#f7faff" stroke="#6c9bd1" stroke-width="1.8"/>
+<circle cx="120" cy="188" r="22" fill="none" stroke="#2874c8" stroke-width="2.5"/>
+<path d="M78 257 Q80 218 120 218 Q160 218 162 257" fill="none" stroke="#2874c8" stroke-width="2.5"/>
+<text x="120" y="283" text-anchor="middle" class="head">Users / Clients</text>
+
+<!-- ingress -->
+<rect x="270" y="160" width="220" height="125" rx="12" fill="#fff5e8" stroke="#d69a3a" stroke-width="1.8"/>
+<circle cx="380" cy="200" r="25" fill="none" stroke="#7952a3" stroke-width="2.5"/>
+<path d="M355 200 H405 M380 175 V225 M363 183 L397 217 M397 183 L363 217" fill="none" stroke="#7952a3" stroke-width="2"/>
+<text x="380" y="250" text-anchor="middle" class="head">AWS ALB / Ingress</text>
+<text x="380" y="268" text-anchor="middle" class="tiny">Routes requests to services</text>
+
+<!-- EKS boundary -->
+<rect x="540" y="105" width="1135" height="735" rx="16" fill="#f4fbf4" stroke="#388b45" stroke-width="2.2"/>
+<g transform="translate(565 120)"><path d="M25 0 L48 13 V40 L25 53 L2 40 V13Z" fill="#438b45"/><path d="M25 9 L39 17 V35 L25 44 L11 35 V17Z" fill="none" stroke="#fff" stroke-width="2"/></g>
+<text x="630" y="155" class="section">Amazon EKS — Application Namespace</text>
+<text x="1640" y="155" text-anchor="end" class="tiny">21 microservices | separate Deployments and Kubernetes Services</text>
+
+<!-- services cards -->
+<g>
+ <rect x="585" y="190" width="245" height="112" rx="10" fill="#fff" stroke="#7cab7c" stroke-width="1.5"/>
+ <rect x="855" y="190" width="245" height="112" rx="10" fill="#fff" stroke="#7cab7c" stroke-width="1.5"/>
+ <rect x="1125" y="190" width="245" height="112" rx="10" fill="#fff" stroke="#7cab7c" stroke-width="1.5"/>
+ <rect x="1395" y="190" width="245" height="112" rx="10" fill="#fff" stroke="#7cab7c" stroke-width="1.5"/>
+ <rect x="585" y="330" width="245" height="112" rx="10" fill="#fff" stroke="#7cab7c" stroke-width="1.5"/>
+ <rect x="855" y="330" width="245" height="112" rx="10" fill="#fff" stroke="#7cab7c" stroke-width="1.5"/>
+ <rect x="1125" y="330" width="245" height="112" rx="10" fill="#fff" stroke="#7cab7c" stroke-width="1.5"/>
+ <rect x="1395" y="330" width="245" height="112" rx="10" fill="#fff" stroke="#7cab7c" stroke-width="1.5"/>
+</g>
+<!-- service icons -->
+<g fill="#e8f5e9" stroke="#388b45" stroke-width="2">
+ <path d="M610 220 L628 210 L646 220 V244 L628 254 L610 244Z"/><path d="M880 220 L898 210 L916 220 V244 L898 254 L880 244Z"/>
+ <path d="M1150 220 L1168 210 L1186 220 V244 L1168 254 L1150 244Z"/><path d="M1420 220 L1438 210 L1456 220 V244 L1438 254 L1420 244Z"/>
+ <path d="M610 360 L628 350 L646 360 V384 L628 394 L610 384Z"/><path d="M880 360 L898 350 L916 360 V384 L898 394 L880 384Z"/>
+ <path d="M1150 360 L1168 350 L1186 360 V384 L1168 394 L1150 384Z"/><path d="M1420 360 L1438 350 L1456 360 V384 L1438 394 L1420 384Z"/>
+</g>
+<g class="head">
+ <text x="705" y="230">User Service</text><text x="975" y="230">Product Catalog</text><text x="1245" y="230">Cart Service</text><text x="1515" y="230">Order Service</text>
+ <text x="705" y="370">Payment Service</text><text x="975" y="370">Inventory Service</text><text x="1245" y="370">Notification Service</text><text x="1515" y="370">Other Services</text>
+</g>
+<g class="tiny">
+ <text x="705" y="260">Authentication / user profile</text><text x="975" y="260">Products / categories</text><text x="1245" y="260">Cart management</text><text x="1515" y="260">Order lifecycle</text>
+ <text x="705" y="400">Payment processing</text><text x="975" y="400">Stock management</text><text x="1245" y="400">Events / messages</text><text x="1515" y="400">Remaining domain services</text>
+</g>
+<text x="1112" y="485" text-anchor="middle" class="tiny">Each service has its own container image, Deployment, Service, configuration and scaling policy.</text>
+
+<!-- internal communication / policies -->
+<rect x="585" y="520" width="1055" height="105" rx="10" fill="#eef5ff" stroke="#6c9bd1" stroke-width="1.5"/>
+<text x="1112" y="550" text-anchor="middle" class="head">Service Communication</text>
+<text x="1112" y="575" text-anchor="middle" class="body">Synchronous: Kubernetes DNS + ClusterIP Services + HTTP / REST (where implemented)</text>
+<text x="1112" y="598" text-anchor="middle" class="body">Asynchronous: publish / consume events through the messaging layer</text>
+
+<!-- health / scaling -->
+<rect x="585" y="650" width="1055" height="145" rx="10" fill="#fff" stroke="#7cab7c" stroke-width="1.5"/>
+<text x="1112" y="680" text-anchor="middle" class="head">Kubernetes Workload Controls</text>
+<g>
+ <rect x="620" y="705" width="220" height="60" rx="8" fill="#f2fff2" stroke="#7cab7c"/><text x="730" y="731" text-anchor="middle" class="body">Readiness / Liveness</text><text x="730" y="749" text-anchor="middle" class="tiny">Probe checks</text>
+ <rect x="875" y="705" width="220" height="60" rx="8" fill="#f2fff2" stroke="#7cab7c"/><text x="985" y="731" text-anchor="middle" class="body">Requests / Limits</text><text x="985" y="749" text-anchor="middle" class="tiny">CPU and memory</text>
+ <rect x="1130" y="705" width="220" height="60" rx="8" fill="#f2fff2" stroke="#7cab7c"/><text x="1240" y="731" text-anchor="middle" class="body">Horizontal Pod Autoscaler</text><text x="1240" y="749" text-anchor="middle" class="tiny">Replica scaling</text>
+ <rect x="1385" y="705" width="220" height="60" rx="8" fill="#f2fff2" stroke="#7cab7c"/><text x="1495" y="731" text-anchor="middle" class="body">Rolling Updates</text><text x="1495" y="749" text-anchor="middle" class="tiny">Availability / rollback</text>
+</g>
+
+<!-- data and messaging row -->
+<rect x="25" y="900" width="1650" height="165" rx="14" fill="#fbf7ff" stroke="#7952a3" stroke-width="1.8"/>
+<text x="850" y="930" text-anchor="middle" class="section">Data &amp; Messaging Layer — Integration Boundaries</text>
+<g>
+ <rect x="75" y="955" width="330" height="82" rx="9" fill="#fff" stroke="#d49a45" stroke-width="1.5"/>
+ <g transform="translate(100 972)" fill="none" stroke="#c58b28" stroke-width="2.5"><ellipse cx="25" cy="8" rx="23" ry="8"/><path d="M2 8 V42 Q25 57 48 42 V8 M2 25 Q25 40 48 25"/></g>
+ <text x="280" y="987" text-anchor="middle" class="head">Amazon RDS</text><text x="280" y="1008" text-anchor="middle" class="tiny">Relational persistence</text>
+ <rect x="455" y="955" width="330" height="82" rx="9" fill="#fff" stroke="#d49a45" stroke-width="1.5"/>
+ <g transform="translate(485 972)" fill="none" stroke="#c92f45" stroke-width="2.5"><path d="M2 18 Q25 -2 48 18 Q25 38 2 18Z"/><path d="M25 18 V48 M10 35 Q25 48 40 35"/></g>
+ <text x="660" y="987" text-anchor="middle" class="head">Redis</text><text x="660" y="1008" text-anchor="middle" class="tiny">Caching / fast lookup</text>
+ <rect x="835" y="955" width="330" height="82" rx="9" fill="#fff" stroke="#d49a45" stroke-width="1.5"/>
+ <g transform="translate(865 972)" fill="none" stroke="#2874c8" stroke-width="2.5"><circle cx="25" cy="25" r="22"/><path d="M3 25 H47 M25 3 V47 M10 10 L40 40 M40 10 L10 40"/></g>
+ <text x="1040" y="987" text-anchor="middle" class="head">RabbitMQ</text><text x="1040" y="1008" text-anchor="middle" class="tiny">Message queueing</text>
+ <rect x="1215" y="955" width="400" height="82" rx="9" fill="#fff" stroke="#d49a45" stroke-width="1.5"/>
+ <g transform="translate(1245 972)" fill="none" stroke="#2874c8" stroke-width="2.5"><path d="M0 5 H48 M0 25 H48 M0 45 H48"/><circle cx="10" cy="5" r="5" fill="#fff"/><circle cx="34" cy="25" r="5" fill="#fff"/><circle cx="20" cy="45" r="5" fill="#fff"/></g>
+ <text x="1450" y="987" text-anchor="middle" class="head">Apache Kafka</text><text x="1450" y="1008" text-anchor="middle" class="tiny">Event streaming</text>
+</g>
+
+<!-- outside flow arrows -->
+<path d="M215 220 H270" class="blue"/>
+<path d="M490 220 H540" class="blue"/>
+<path d="M1515 442 V520" class="green"/>
+<path d="M705 442 V520" class="green"/>
+<path d="M1112 840 V900" class="purple"/>
+<path d="M280 900 V840 H585" class="purple"/>
+<path d="M660 900 V840 H855" class="purple"/>
+<path d="M1040 900 V840 H1125" class="purple"/>
+<path d="M1450 900 V840 H1395" class="purple"/>
+
+<!-- footnote -->
+<text x="850" y="1095" text-anchor="middle" class="tiny">Conceptual service map. Exact service names, API contracts, data ownership and message flows must match the implemented application.</text>
+</svg>
