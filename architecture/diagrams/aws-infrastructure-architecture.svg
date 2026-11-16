@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1120" viewBox="0 0 1700 1120">
+<defs>
+ <marker id="o" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#e87524"/></marker>
+ <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#2874c8"/></marker>
+ <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#388b45"/></marker>
+ <marker id="p" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#7952a3"/></marker>
+ <style>
+ text{font-family:Arial,Helvetica,sans-serif;fill:#172b4d}
+ .title{font-size:30px;font-weight:700}.sub{font-size:14px;fill:#536579}
+ .section{font-size:19px;font-weight:700}.head{font-size:14px;font-weight:700}
+ .body{font-size:12px}.tiny{font-size:10px;fill:#536579}
+ .orange{fill:none;stroke:#e87524;stroke-width:2.5;marker-end:url(#o)}
+ .blue{fill:none;stroke:#2874c8;stroke-width:2.5;marker-end:url(#b)}
+ .green{fill:none;stroke:#388b45;stroke-width:2.5;marker-end:url(#g)}
+ .purple{fill:none;stroke:#7952a3;stroke-width:2.5;marker-end:url(#p)}
+ </style>
+</defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="850" y="42" text-anchor="middle" class="title">production-devops-platform — AWS Infrastructure Architecture</text>
+<text x="850" y="68" text-anchor="middle" class="sub">Terraform-managed AWS foundation | VPC networking | EKS | IAM | ECR</text>
+
+<!-- Terraform and identity -->
+<rect x="25" y="105" width="285" height="205" rx="13" fill="#fff8f1" stroke="#e87524" stroke-width="2"/>
+<text x="167" y="136" text-anchor="middle" class="section">Infrastructure as Code</text>
+<g transform="translate(60 158)" fill="none" stroke="#7952a3" stroke-width="3">
+ <path d="M0 0 H35 V35 H0Z M42 25 H77 V60 H42Z M0 50 H35 V85 H0Z"/>
+</g>
+<text x="205" y="184" class="head" text-anchor="middle">Terraform</text>
+<text x="205" y="205" class="tiny" text-anchor="middle">Reusable modules</text>
+<rect x="48" y="250" width="238" height="42" rx="7" fill="#fff" stroke="#e87524"/>
+<text x="167" y="276" text-anchor="middle" class="body">Plan → Review → Apply</text>
+
+<rect x="25" y="355" width="285" height="210" rx="13" fill="#fbf7ff" stroke="#7952a3" stroke-width="1.8"/>
+<text x="167" y="386" text-anchor="middle" class="section">State &amp; Access</text>
+<g transform="translate(58 410)">
+ <path d="M0 8 Q25 -2 50 8 L46 48 Q25 59 4 48Z" fill="#4c8b3b" stroke="#356d2b" stroke-width="2"/>
+ <path d="M2 17 Q25 26 48 17 M4 34 Q25 43 46 34" stroke="#fff" stroke-width="2" fill="none"/>
+</g>
+<text x="145" y="445" class="head">Amazon S3</text><text x="145" y="463" class="tiny">Terraform state backend</text>
+<g transform="translate(58 485)" fill="none" stroke="#c92f45" stroke-width="2.5">
+ <path d="M25 0 L48 9 V30 Q44 48 25 57 Q6 48 2 30 V9Z"/><path d="M15 28 L23 36 L37 19" stroke="#fff" stroke-width="2.5"/>
+</g>
+<text x="145" y="515" class="head">IAM / OIDC</text><text x="145" y="533" class="tiny">Federated deployment access</text>
+
+<!-- AWS boundary -->
+<rect x="355" y="100" width="1315" height="970" rx="17" fill="#fcfdff" stroke="#263746" stroke-width="2.2"/>
+<rect x="355" y="100" width="50" height="42" rx="5" fill="#263238"/>
+<text x="380" y="127" text-anchor="middle" font-size="19" font-weight="bold" fill="#fff">aws</text>
+<text x="420" y="130" class="section">AWS Cloud — Account / Region boundary</text>
+
+<!-- shared services strip -->
+<rect x="425" y="160" width="1205" height="145" rx="12" fill="#fbf7ff" stroke="#7952a3" stroke-width="1.5"/>
+<text x="450" y="188" class="section">Shared AWS Services</text>
+<!-- ECR -->
+<g transform="translate(485 205)" fill="none" stroke="#df6c1c" stroke-width="3">
+ <path d="M0 8 L27 0 L54 8 V42 L27 54 L0 42Z M0 8 L27 21 L54 8 M27 21 V54"/>
+</g>
+<text x="512" y="278" text-anchor="middle" class="head">Amazon ECR</text>
+<text x="512" y="294" text-anchor="middle" class="tiny">Container images</text>
+<!-- IAM -->
+<g transform="translate(690 204)">
+ <path d="M27 0 L54 10 V34 Q50 52 27 63 Q4 52 0 34 V10Z" fill="#c92f45"/>
+ <path d="M14 31 L24 41 L42 20" stroke="#fff" stroke-width="3" fill="none"/>
+</g>
+<text x="717" y="278" text-anchor="middle" class="head">IAM Roles</text>
+<text x="717" y="294" text-anchor="middle" class="tiny">Least privilege</text>
+<!-- KMS -->
+<g transform="translate(900 211)" fill="none" stroke="#c58b28" stroke-width="3">
+ <circle cx="20" cy="20" r="16"/><path d="M35 20 H62 V30 H52 V40 H42 V30 H35"/>
+</g>
+<text x="930" y="278" text-anchor="middle" class="head">KMS</text>
+<text x="930" y="294" text-anchor="middle" class="tiny">Encryption keys</text>
+<!-- CloudWatch -->
+<g transform="translate(1105 207)" fill="none" stroke="#c43d82" stroke-width="3">
+ <path d="M4 44 Q-2 25 15 19 Q17 0 38 6 Q54 4 57 22 Q74 25 67 44Z"/>
+ <path d="M15 34 L26 25 L37 34 L50 16"/>
+</g>
+<text x="1140" y="278" text-anchor="middle" class="head">CloudWatch</text>
+<text x="1140" y="294" text-anchor="middle" class="tiny">AWS service metrics/logs</text>
+<!-- S3 -->
+<g transform="translate(1325 207)">
+ <path d="M0 8 Q25 -2 50 8 L46 48 Q25 59 4 48Z" fill="#4c8b3b" stroke="#356d2b" stroke-width="2"/>
+ <path d="M2 17 Q25 26 48 17 M4 34 Q25 43 46 34" stroke="#fff" stroke-width="2" fill="none"/>
+</g>
+<text x="1350" y="278" text-anchor="middle" class="head">Amazon S3</text>
+<text x="1350" y="294" text-anchor="middle" class="tiny">Artifacts / backups as needed</text>
+
+<!-- VPC -->
+<rect x="425" y="330" width="1205" height="700" rx="15" fill="#f0f6ff" stroke="#2874c8" stroke-width="2.2"/>
+<g transform="translate(450 344)">
+ <path d="M0 10 L24 0 L48 10 V38 L24 50 L0 38Z" fill="#2874c8"/>
+ <path d="M12 17 L24 11 L36 17 V31 L24 37 L12 31Z" fill="none" stroke="#fff" stroke-width="2"/>
+</g>
+<text x="510" y="375" class="section">VPC — CIDR and Network Segmentation</text>
+<text x="1595" y="375" text-anchor="end" class="tiny">CIDR ranges, AZ count and routes to be finalized in Terraform variables</text>
+
+<!-- Internet and IGW -->
+<rect x="455" y="405" width="200" height="145" rx="10" fill="#fff" stroke="#6c9bd1" stroke-width="1.5"/>
+<circle cx="555" cy="450" r="28" fill="none" stroke="#2874c8" stroke-width="2.5"/>
+<path d="M527 450 H583 M555 422 V478 M535 430 Q555 450 575 430 M535 470 Q555 450 575 470" fill="none" stroke="#2874c8" stroke-width="1.7"/>
+<text x="555" y="500" text-anchor="middle" class="head">Internet Gateway</text>
+<text x="555" y="520" text-anchor="middle" class="tiny">Public route</text>
+
+<!-- Public subnets -->
+<rect x="690" y="405" width="390" height="270" rx="10" fill="#f8fbff" stroke="#6c9bd1" stroke-width="1.5" stroke-dasharray="7 4"/>
+<text x="885" y="433" text-anchor="middle" class="head">Public Subnets — across AZs</text>
+<!-- ALB icon -->
+<g transform="translate(755 460)" fill="none" stroke="#7952a3" stroke-width="2.5">
+ <circle cx="28" cy="25" r="22"/><path d="M7 25 H49 M28 4 V46 M14 12 L42 38 M42 12 L14 38"/>
+</g>
+<text x="783" y="525" text-anchor="middle" class="head">Application Load</text><text x="783" y="542" text-anchor="middle" class="body">Balancer (ALB)</text>
+<!-- NAT -->
+<g transform="translate(920 460)" fill="none" stroke="#7952a3" stroke-width="2.5">
+ <circle cx="28" cy="25" r="22"/><path d="M8 25 H48 M28 5 V45 M14 14 L8 25 L14 36 M42 14 L48 25 L42 36"/>
+</g>
+<text x="948" y="525" text-anchor="middle" class="head">NAT Gateway</text>
+<text x="885" y="600" text-anchor="middle" class="tiny">Route tables • public-facing resources only</text>
+
+<!-- Private subnets -->
+<rect x="1110" y="405" width="490" height="270" rx="10" fill="#f8fbff" stroke="#6c9bd1" stroke-width="1.5" stroke-dasharray="7 4"/>
+<text x="1355" y="433" text-anchor="middle" class="head">Private Subnets — EKS Nodes</text>
+<g>
+ <rect x="1135" y="460" width="135" height="145" rx="8" fill="#fff" stroke="#6c9bd1"/>
+ <rect x="1285" y="460" width="135" height="145" rx="8" fill="#fff" stroke="#6c9bd1"/>
+ <rect x="1435" y="460" width="135" height="145" rx="8" fill="#fff" stroke="#6c9bd1"/>
+</g>
+<g fill="none" stroke="#c35c25" stroke-width="2.5">
+ <rect x="1172" y="485" width="60" height="52" rx="5"/><path d="M1183 475V485 M1198 475V485 M1213 475V485 M1228 475V485 M1183 537V547 M1198 537V547 M1213 537V547 M1228 537V547 M1162 495H1172 M1162 510H1172 M1162 525H1172 M1232 495H1242 M1232 510H1242 M1232 525H1242"/>
+ <rect x="1322" y="485" width="60" height="52" rx="5"/><path d="M1333 475V485 M1348 475V485 M1363 475V485 M1378 475V485 M1333 537V547 M1348 537V547 M1363 537V547 M1378 537V547 M1312 495H1322 M1312 510H1322 M1312 525H1322 M1382 495H1392 M1382 510H1392 M1382 525H1392"/>
+ <rect x="1472" y="485" width="60" height="52" rx="5"/><path d="M1483 475V485 M1498 475V485 M1513 475V485 M1528 475V485 M1483 537V547 M1498 537V547 M1513 537V547 M1528 537V547 M1462 495H1472 M1462 510H1472 M1462 525H1472 M1532 495H1542 M1532 510H1542 M1532 525H1542"/>
+</g>
+<text x="1202" y="575" text-anchor="middle" class="head">Node Group A</text>
+<text x="1352" y="575" text-anchor="middle" class="head">Node Group B</text>
+<text x="1502" y="575" text-anchor="middle" class="head">Node Group C</text>
+<text x="1355" y="632" text-anchor="middle" class="tiny">Private IPs • worker capacity • autoscaling configuration</text>
+
+<!-- EKS control plane -->
+<rect x="690" y="710" width="910" height="270" rx="12" fill="#f5fff5" stroke="#388b45" stroke-width="1.7"/>
+<g transform="translate(715 725)">
+ <path d="M25 0 L48 13 V40 L25 53 L2 40 V13Z" fill="#438b45"/>
+ <path d="M25 9 L39 17 V35 L25 44 L11 35 V17Z" fill="none" stroke="#fff" stroke-width="2"/>
+ <circle cx="25" cy="26" r="7" fill="none" stroke="#fff" stroke-width="2"/>
+</g>
+<text x="780" y="759" class="section">Amazon EKS Cluster</text>
+<rect x="720" y="785" width="390" height="155" rx="9" fill="#fff" stroke="#7cab7c" stroke-dasharray="6 4"/>
+<text x="915" y="812" text-anchor="middle" class="head">Kubernetes System Add-ons</text>
+<g>
+ <rect x="740" y="830" width="165" height="42" rx="7" fill="#f2f8ff" stroke="#6c9bd1"/>
+ <text x="822" y="856" text-anchor="middle" class="body">CoreDNS</text>
+ <rect x="925" y="830" width="165" height="42" rx="7" fill="#f2f8ff" stroke="#6c9bd1"/>
+ <text x="1007" y="856" text-anchor="middle" class="body">AWS LB Controller</text>
+ <rect x="740" y="883" width="165" height="42" rx="7" fill="#f2f8ff" stroke="#6c9bd1"/>
+ <text x="822" y="909" text-anchor="middle" class="body">EBS CSI Driver</text>
+ <rect x="925" y="883" width="165" height="42" rx="7" fill="#f2f8ff" stroke="#6c9bd1"/>
+ <text x="1007" y="909" text-anchor="middle" class="body">Kubelet / CNI</text>
+</g>
+<rect x="1140" y="785" width="430" height="155" rx="9" fill="#fff" stroke="#7cab7c" stroke-dasharray="6 4"/>
+<text x="1355" y="812" text-anchor="middle" class="head">Worker Node Groups</text>
+<g>
+ <rect x="1165" y="830" width="180" height="90" rx="8" fill="#f2fff2" stroke="#7cab7c"/>
+ <rect x="1365" y="830" width="180" height="90" rx="8" fill="#f2fff2" stroke="#7cab7c"/>
+</g>
+<text x="1255" y="866" text-anchor="middle" class="head">Managed Nodes</text><text x="1255" y="888" text-anchor="middle" class="tiny">Application workloads</text>
+<text x="1455" y="866" text-anchor="middle" class="head">Managed Nodes</text><text x="1455" y="888" text-anchor="middle" class="tiny">System / platform pods</text>
+
+<!-- storage / db optional services outside vpc as examples -->
+<rect x="690" y="995" width="910" height="52" rx="9" fill="#fff8ef" stroke="#d49a45"/>
+<text x="1145" y="1017" text-anchor="middle" class="head">Data Services — separately designed and secured</text>
+<text x="1145" y="1035" text-anchor="middle" class="tiny">Amazon RDS • Redis • RabbitMQ • Kafka — final hosting and subnet placement to be confirmed</text>
+
+<!-- Flow lines -->
+<path d="M310 270 H340 V232 H425" class="orange"/>
+<text x="350" y="218" class="tiny">Terraform provisions</text>
+<path d="M310 470 H340 V285 H425" class="purple"/>
+<text x="350" y="300" class="tiny">OIDC / state access</text>
+<path d="M310 780 H340 V365 H425" class="orange"/>
+<path d="M655 475 H690" class="blue"/>
+<path d="M1080 520 H1110" class="blue"/>
+<path d="M885 675 V710" class="green"/>
+<path d="M1355 675 V710" class="green"/>
+<path d="M1355 980 V995" class="green"/>
+<path d="M512 260 V305 H512 V330" class="purple"/>
+<path d="M512 305 H690 V210" class="purple"/>
+<text x="610" y="322" class="tiny">State / service integration</text>
+
+<!-- legend -->
+<rect x="25" y="600" width="285" height="230" rx="12" fill="#fff" stroke="#d5dce5"/>
+<text x="167" y="632" text-anchor="middle" class="head">Architecture Flow Legend</text>
+<line x1="55" y1="675" x2="110" y2="675" stroke="#e87524" stroke-width="3"/><text x="125" y="680" class="body" text-anchor="start">Terraform / provisioning</text>
+<line x1="55" y1="715" x2="110" y2="715" stroke="#2874c8" stroke-width="3"/><text x="125" y="720" class="body" text-anchor="start">Network traffic</text>
+<line x1="55" y1="755" x2="110" y2="755" stroke="#388b45" stroke-width="3"/><text x="125" y="760" class="body" text-anchor="start">EKS / workloads</text>
+<line x1="55" y1="795" x2="110" y2="795" stroke="#7952a3" stroke-width="3"/><text x="125" y="800" class="body" text-anchor="start">Identity / state access</text>
+<text x="850" y="1090" text-anchor="middle" class="tiny">Reference design: configure CIDRs, AZs, route tables, NAT strategy, EKS version and node sizing in Terraform variables.</text>
+</svg>
