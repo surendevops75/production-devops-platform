@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#eaf1fa"/></linearGradient>
+ <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#16a085"/><stop offset="1" stop-color="#087e69"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#183153" flood-opacity=".12"/></filter>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#58718d"/></marker>
+ <style>
+ .title{font:700 34px Arial;fill:#10233f}.sub{font:16px Arial;fill:#53677f}.head{font:700 19px Arial;fill:#142b49}.txt{font:15px Arial;fill:#405873}.small{font:13px Arial;fill:#5c718a}
+ .card{fill:#fff;stroke:#d7e2ef;stroke-width:1.5;rx:18;filter:url(#shadow)}.line{stroke:#58718d;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+ </style>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<text x="65" y="70" class="title">Production Security Architecture</text>
+<text x="65" y="103" class="sub">Layered security across source control, CI/CD, AWS identity, containers, Kubernetes, and operations</text>
+
+<rect x="55" y="145" width="1490" height="430" rx="24" fill="#f0f5fc" stroke="#d5e1ef"/>
+<text x="85" y="185" class="head">Security controls across the delivery lifecycle</text>
+
+<!-- Source -->
+<rect x="85" y="235" width="245" height="255" class="card"/>
+<circle cx="145" cy="290" r="29" fill="#172b4d"/>
+<path d="M132 290l13-13 13 13-13 13z M145 277v26 M132 290h26" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+<text x="190" y="288" class="head">Source control</text>
+<text x="110" y="350" class="txt">Protected branches</text>
+<text x="110" y="380" class="txt">Pull request reviews</text>
+<text x="110" y="410" class="txt">Secret scanning</text>
+<text x="110" y="440" class="txt">Least-privilege access</text>
+
+<!-- CI -->
+<rect x="390" y="235" width="275" height="255" class="card"/>
+<rect x="420" y="263" width="54" height="54" rx="12" fill="#2563eb"/>
+<path d="M433 291h28 M447 277v28 M438 281l18 20 M456 281l-18 20" stroke="#fff" stroke-width="3" fill="none"/>
+<text x="490" y="288" class="head">CI security gates</text>
+<text x="415" y="350" class="txt">SonarQube code analysis</text>
+<text x="415" y="380" class="txt">Dependency / secret checks</text>
+<text x="415" y="410" class="txt">Trivy image scanning</text>
+<text x="415" y="440" class="txt">Build artifact validation</text>
+
+<!-- Identity -->
+<rect x="725" y="235" width="250" height="255" class="card"/>
+<path d="M785 260l35 12v30c0 25-18 39-35 49-17-10-35-24-35-49v-30z" fill="url(#shield)"/>
+<path d="M770 301l11 11 21-25" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="835" y="288" class="head">Identity &amp; access</text>
+<text x="750" y="350" class="txt">IAM least privilege</text>
+<text x="750" y="380" class="txt">GitHub OIDC / role trust</text>
+<text x="750" y="410" class="txt">Short-lived credentials</text>
+<text x="750" y="440" class="txt">Kubernetes RBAC</text>
+
+<!-- runtime -->
+<rect x="1035" y="235" width="230" height="255" class="card"/>
+<polygon points="1090,260 1117,275 1117,305 1090,320 1063,305 1063,275" fill="#326ce5"/>
+<text x="1090" y="298" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#fff">K8s</text>
+<text x="1130" y="288" class="head">EKS runtime</text>
+<text x="1060" y="350" class="txt">Network boundaries</text>
+<text x="1060" y="380" class="txt">Pod security controls</text>
+<text x="1060" y="410" class="txt">Secrets protection</text>
+<text x="1060" y="440" class="txt">Probes / resource limits</text>
+
+<!-- monitoring -->
+<rect x="1325" y="235" width="185" height="255" class="card"/>
+<circle cx="1385" cy="290" r="28" fill="#0f766e"/>
+<path d="M1367 293h10l7-15 9 28 7-13h10" stroke="#fff" stroke-width="3" fill="none" stroke-linejoin="round"/>
+<text x="1425" y="288" class="head">Operations</text>
+<text x="1350" y="350" class="txt">Prometheus</text>
+<text x="1350" y="380" class="txt">Grafana alerts</text>
+<text x="1350" y="410" class="txt">ELK investigation</text>
+<text x="1350" y="440" class="txt">Audit / response</text>
+
+<path d="M330 365H380" class="line"/><path d="M665 365H715" class="line"/><path d="M975 365H1025" class="line"/><path d="M1265 365H1315" class="line"/>
+
+<!-- lower panels -->
+<rect x="55" y="620" width="700" height="300" rx="22" fill="#fff" stroke="#d7e2ef" filter="url(#shadow)"/>
+<text x="85" y="665" class="head">Security design principles</text>
+<g class="txt">
+<text x="95" y="715">• Defense in depth: apply controls at every layer</text>
+<text x="95" y="755">• Least privilege: grant only required permissions</text>
+<text x="95" y="795">• Secret hygiene: never commit credentials to Git</text>
+<text x="95" y="835">• Immutable artifacts: scan and promote the same image</text>
+<text x="95" y="875">• Continuous verification: monitor, alert, investigate</text>
+</g>
+
+<rect x="800" y="620" width="745" height="300" rx="22" fill="#fff" stroke="#d7e2ef" filter="url(#shadow)"/>
+<text x="830" y="665" class="head">Security response loop</text>
+<g>
+<rect x="845" y="710" width="145" height="85" rx="13" fill="#edf4ff" stroke="#d2e2f8"/>
+<text x="917" y="745" text-anchor="middle" class="head">Prevent</text><text x="917" y="772" text-anchor="middle" class="small">policies / reviews</text>
+<path d="M990 752H1015" class="line"/>
+<rect x="1025" y="710" width="145" height="85" rx="13" fill="#edf4ff" stroke="#d2e2f8"/>
+<text x="1097" y="745" text-anchor="middle" class="head">Detect</text><text x="1097" y="772" text-anchor="middle" class="small">scans / alerts</text>
+<path d="M1170 752H1195" class="line"/>
+<rect x="1205" y="710" width="145" height="85" rx="13" fill="#edf4ff" stroke="#d2e2f8"/>
+<text x="1277" y="745" text-anchor="middle" class="head">Respond</text><text x="1277" y="772" text-anchor="middle" class="small">contain / remediate</text>
+<path d="M1350 752H1375" class="line"/>
+<rect x="1385" y="710" width="125" height="85" rx="13" fill="#edf8f3" stroke="#cde8d9"/>
+<text x="1447" y="745" text-anchor="middle" class="head">Improve</text><text x="1447" y="772" text-anchor="middle" class="small">RCA / harden</text>
+</g>
+<text x="845" y="850" class="txt">Record findings, owners, severity, remediation and verification evidence.</text>
+<text x="845" y="880" class="small">Treat security exceptions as time-bound and explicitly approved.</text>
+
+<text x="65" y="965" class="small">Reference architecture: individual tools and controls are configuration-dependent; verify which security gates and runtime policies are actually enabled.</text>
+</svg>
