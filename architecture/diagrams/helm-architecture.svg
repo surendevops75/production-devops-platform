@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1050" viewBox="0 0 1600 1050">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7faff"/><stop offset="1" stop-color="#eaf1fb"/></linearGradient>
+  <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2563eb"/><stop offset="1" stop-color="#1e40af"/></linearGradient>
+  <linearGradient id="helm" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0ea5e9"/><stop offset="1" stop-color="#0369a1"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#183153" flood-opacity=".12"/></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#54708f"/></marker>
+  <style>
+    .h{font:700 34px Arial,sans-serif;fill:#10233f}.sub{font:16px Arial,sans-serif;fill:#53677f}
+    .head{font:700 19px Arial,sans-serif;fill:#142b49}.txt{font:15px Arial,sans-serif;fill:#405873}
+    .small{font:13px Arial,sans-serif;fill:#5c718a}.white{fill:#fff}.line{stroke:#54708f;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+    .card{fill:#fff;stroke:#d7e2ef;stroke-width:1.5;rx:18;filter:url(#shadow)}
+    .pill{fill:#edf4ff;stroke:#d2e2f8;rx:10}
+  </style>
+</defs>
+<rect width="1600" height="1050" fill="url(#bg)"/>
+<text x="70" y="70" class="h">Helm Architecture</text>
+<text x="70" y="102" class="sub">Package Kubernetes applications, manage environment values, and reconcile releases through Argo CD</text>
+
+<!-- Main flow -->
+<rect x="60" y="145" width="1480" height="360" rx="24" fill="#f0f5fc" stroke="#d5e1ef"/>
+<text x="90" y="185" class="head">Delivery and deployment flow</text>
+
+<!-- Source repo -->
+<rect x="90" y="225" width="245" height="210" class="card"/>
+<circle cx="145" cy="275" r="28" fill="#172b4d"/>
+<path d="M132 275l13-13 13 13-13 13z M145 262v26 M132 275h26" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+<text x="185" y="272" class="head">GitHub</text>
+<text x="115" y="325" class="txt">Application source</text>
+<text x="115" y="350" class="txt">CI builds and tests image</text>
+<text x="115" y="375" class="txt">Push image to Amazon ECR</text>
+<rect x="115" y="395" width="185" height="24" class="pill"/>
+<text x="207" y="412" text-anchor="middle" class="small">image tag / version</text>
+
+<!-- GitOps repo -->
+<rect x="390" y="225" width="280" height="210" class="card"/>
+<circle cx="445" cy="275" r="28" fill="#172b4d"/>
+<path d="M432 275l13-13 13 13-13 13z M445 262v26 M432 275h26" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+<text x="485" y="272" class="head">GitOps repository</text>
+<text x="415" y="325" class="txt">Helm chart source</text>
+<text x="415" y="350" class="txt">values-dev.yaml</text>
+<text x="415" y="375" class="txt">values-staging.yaml</text>
+<text x="415" y="400" class="txt">values-prod.yaml</text>
+
+<!-- Helm chart -->
+<rect x="725" y="225" width="260" height="210" class="card"/>
+<circle cx="780" cy="275" r="29" fill="url(#helm)"/>
+<circle cx="780" cy="275" r="8" fill="none" stroke="#fff" stroke-width="4"/>
+<g stroke="#fff" stroke-width="4" stroke-linecap="round">
+<path d="M780 251v9 M780 290v9 M756 275h9 M795 275h9 M763 258l7 7 M790 285l7 7 M797 258l-7 7 M770 285l-7 7"/>
+</g>
+<text x="825" y="272" class="head">Helm chart</text>
+<text x="750" y="325" class="txt">Chart.yaml</text>
+<text x="750" y="350" class="txt">values.yaml</text>
+<text x="750" y="375" class="txt">templates/</text>
+<text x="750" y="400" class="txt">Deployment • Service • Ingress</text>
+
+<!-- Argo -->
+<rect x="1040" y="225" width="220" height="210" class="card"/>
+<circle cx="1095" cy="275" r="29" fill="#ef6c35"/>
+<path d="M1080 282l15-24 15 24z" fill="none" stroke="#fff" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="1095" cy="278" r="4" fill="#fff"/>
+<text x="1140" y="272" class="head">Argo CD</text>
+<text x="1065" y="325" class="txt">Reads Git desired state</text>
+<text x="1065" y="350" class="txt">Renders Helm templates</text>
+<text x="1065" y="375" class="txt">Syncs and checks health</text>
+<text x="1065" y="400" class="small">Drift detection / reconciliation</text>
+
+<!-- EKS -->
+<rect x="1310" y="225" width="195" height="210" class="card"/>
+<polygon points="1365,247 1389,260 1389,288 1365,301 1341,288 1341,260" fill="#326ce5"/>
+<text x="1365" y="281" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#fff">K8s</text>
+<text x="1405" y="272" class="head">Amazon EKS</text>
+<text x="1335" y="325" class="txt">Kubernetes API</text>
+<text x="1335" y="350" class="txt">Helm-managed resources</text>
+<text x="1335" y="375" class="txt">21 microservices</text>
+<text x="1335" y="400" class="small">Rollout and health checks</text>
+
+<path d="M335 330H380" class="line"/><path d="M670 330H715" class="line"/><path d="M985 330H1030" class="line"/><path d="M1260 330H1300" class="line"/>
+
+<!-- Chart anatomy -->
+<rect x="60" y="550" width="700" height="420" rx="22" fill="#fff" stroke="#d7e2ef" filter="url(#shadow)"/>
+<text x="90" y="595" class="head">Inside a Helm chart</text>
+<text x="90" y="623" class="sub">A reusable package of templates and default configuration</text>
+<rect x="95" y="660" width="285" height="250" rx="14" fill="#f4f8fd" stroke="#d7e2ef"/>
+<text x="120" y="697" font-family="monospace" font-size="18" font-weight="bold" fill="#1e3a5f">my-service/</text>
+<g font-family="monospace" font-size="15" fill="#405873">
+<text x="135" y="735">Chart.yaml</text><text x="135" y="772">values.yaml</text><text x="135" y="809">templates/</text>
+<text x="165" y="846">deployment.yaml</text><text x="165" y="875">service.yaml</text><text x="165" y="904">ingress.yaml</text>
+</g>
+<path d="M400 685H435" class="line"/>
+<rect x="450" y="660" width="275" height="105" rx="14" fill="#edf7ff" stroke="#cfe4f8"/>
+<text x="475" y="695" class="head">Templates</text>
+<text x="475" y="724" class="txt">Kubernetes manifests with</text><text x="475" y="746" class="txt">Helm value placeholders</text>
+<rect x="450" y="790" width="275" height="120" rx="14" fill="#f1f8f3" stroke="#d3e9d8"/>
+<text x="475" y="825" class="head">Values files</text>
+<text x="475" y="854" class="txt">Image tag, replicas, resources,</text><text x="475" y="876" class="txt">environment-specific settings</text><text x="475" y="898" class="small">Keep secrets outside plain values</text>
+
+<!-- lifecycle -->
+<rect x="800" y="550" width="740" height="420" rx="22" fill="#fff" stroke="#d7e2ef" filter="url(#shadow)"/>
+<text x="830" y="595" class="head">Release lifecycle and operational controls</text>
+<g>
+<rect x="840" y="650" width="145" height="90" rx="14" fill="#edf4ff" stroke="#d2e2f8"/>
+<text x="912" y="685" text-anchor="middle" class="head">Package</text><text x="912" y="712" text-anchor="middle" class="small">helm lint / package</text>
+<path d="M985 695H1015" class="line"/>
+<rect x="1025" y="650" width="145" height="90" rx="14" fill="#edf4ff" stroke="#d2e2f8"/>
+<text x="1097" y="685" text-anchor="middle" class="head">Deploy</text><text x="1097" y="712" text-anchor="middle" class="small">install / upgrade</text>
+<path d="M1170 695H1200" class="line"/>
+<rect x="1210" y="650" width="145" height="90" rx="14" fill="#edf4ff" stroke="#d2e2f8"/>
+<text x="1282" y="685" text-anchor="middle" class="head">Verify</text><text x="1282" y="712" text-anchor="middle" class="small">status / rollout</text>
+<path d="M1355 695H1385" class="line"/>
+<rect x="1395" y="650" width="110" height="90" rx="14" fill="#fff3ed" stroke="#f4d4c4"/>
+<text x="1450" y="685" text-anchor="middle" class="head">Recover</text><text x="1450" y="712" text-anchor="middle" class="small">rollback</text>
+</g>
+<text x="840" y="800" class="head">Key operating practices</text>
+<g class="txt">
+<text x="850" y="838">• Pin chart and container image versions</text>
+<text x="850" y="872">• Review rendered manifests before promotion</text>
+<text x="850" y="906">• Separate environment values; avoid secret leakage</text>
+<text x="850" y="940">• Use Argo CD as the reconciler when GitOps owns deployment</text>
+</g>
+<text x="70" y="1015" class="small">Conceptual reference: confirm chart structure, sync policy, release ownership, and environment promotion rules against the actual repository.</text>
+</svg>
