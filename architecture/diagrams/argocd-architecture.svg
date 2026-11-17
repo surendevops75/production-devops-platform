@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7faff"/><stop offset="1" stop-color="#eaf1fb"/></linearGradient>
+ <linearGradient id="argo" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff884d"/><stop offset="1" stop-color="#d94b24"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#183153" flood-opacity=".12"/></filter>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#58718d"/></marker>
+ <style>
+ .title{font:700 34px Arial;fill:#10233f}.sub{font:16px Arial;fill:#53677f}.head{font:700 19px Arial;fill:#142b49}.txt{font:15px Arial;fill:#405873}.small{font:13px Arial;fill:#5c718a}
+ .card{fill:#fff;stroke:#d7e2ef;stroke-width:1.5;rx:18;filter:url(#shadow)}.line{stroke:#58718d;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+ </style>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<text x="65" y="70" class="title">Argo CD Architecture</text>
+<text x="65" y="103" class="sub">GitOps continuous delivery: observe Git, compare desired state, synchronize Kubernetes, and report health</text>
+
+<rect x="55" y="145" width="1490" height="420" rx="24" fill="#f0f5fc" stroke="#d5e1ef"/>
+<text x="85" y="185" class="head">GitOps reconciliation flow</text>
+
+<!-- Git repo -->
+<rect x="90" y="235" width="265" height="245" class="card"/>
+<circle cx="150" cy="290" r="31" fill="#172b4d"/>
+<path d="M137 290l13-13 13 13-13 13z M150 277v26 M137 290h26" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/>
+<text x="198" y="287" class="head">Git repository</text>
+<text x="115" y="350" class="txt">Desired Kubernetes state</text>
+<text x="115" y="378" class="txt">Helm charts / manifests</text>
+<text x="115" y="406" class="txt">Environment values</text>
+<text x="115" y="434" class="txt">Reviewed Git commits</text>
+
+<!-- Argo control plane -->
+<rect x="430" y="215" width="650" height="285" rx="20" fill="#fff" stroke="#edc9b9" stroke-width="2" filter="url(#shadow)"/>
+<rect x="430" y="215" width="650" height="58" rx="18" fill="url(#argo)"/>
+<path d="M460 251l20-31 20 31z" fill="none" stroke="#fff" stroke-width="3.5" stroke-linejoin="round"/>
+<circle cx="480" cy="245" r="4" fill="#fff"/>
+<text x="520" y="252" font-family="Arial" font-size="21" font-weight="bold" fill="#fff">Argo CD control plane</text>
+<rect x="465" y="305" width="180" height="145" rx="13" fill="#fff5f0" stroke="#f0d4c7"/>
+<text x="555" y="340" text-anchor="middle" class="head">API / UI</text>
+<text x="555" y="372" text-anchor="middle" class="txt">Application views</text>
+<text x="555" y="398" text-anchor="middle" class="txt">User access / RBAC</text>
+<rect x="665" y="305" width="180" height="145" rx="13" fill="#fff5f0" stroke="#f0d4c7"/>
+<text x="755" y="340" text-anchor="middle" class="head">Repo Server</text>
+<text x="755" y="372" text-anchor="middle" class="txt">Fetch Git revision</text>
+<text x="755" y="398" text-anchor="middle" class="txt">Render Helm / YAML</text>
+<rect x="865" y="305" width="180" height="145" rx="13" fill="#fff5f0" stroke="#f0d4c7"/>
+<text x="955" y="340" text-anchor="middle" class="head">Controller</text>
+<text x="955" y="372" text-anchor="middle" class="txt">Compare / sync</text>
+<text x="955" y="398" text-anchor="middle" class="txt">Health / drift status</text>
+<path d="M645 377H655" class="line"/><path d="M845 377H855" class="line"/>
+
+<!-- cluster -->
+<rect x="1150" y="235" width="330" height="245" class="card"/>
+<polygon points="1210,260 1237,275 1237,305 1210,320 1183,305 1183,275" fill="#326ce5"/>
+<text x="1210" y="298" text-anchor="middle" font-family="Arial" font-size="17" font-weight="bold" fill="#fff">K8s</text>
+<text x="1260" y="292" class="head">Amazon EKS</text>
+<text x="1180" y="360" class="txt">Kubernetes API server</text>
+<text x="1180" y="390" class="txt">Deployments / Services</text>
+<text x="1180" y="420" class="txt">21 microservices</text>
+<text x="1180" y="450" class="small">Live cluster state and health</text>
+
+<path d="M355 355H420" class="line"/>
+<path d="M1080 355H1140" class="line"/>
+<text x="385" y="330" class="small" text-anchor="middle">poll / webhook</text>
+<text x="1110" y="330" class="small" text-anchor="middle">apply desired state</text>
+
+<!-- Feedback loop -->
+<path d="M1320 490V530H755V510" stroke="#0f8b70" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+<text x="1040" y="523" class="small" fill="#0f766e">sync result • health • drift feedback</text>
+
+<!-- lower sections -->
+<rect x="55" y="610" width="700" height="315" rx="22" fill="#fff" stroke="#d7e2ef" filter="url(#shadow)"/>
+<text x="85" y="655" class="head">Application configuration</text>
+<rect x="90" y="690" width="285" height="185" rx="14" fill="#f4f8fd" stroke="#d7e2ef"/>
+<text x="115" y="730" font-family="monospace" font-size="16" font-weight="bold" fill="#1e3a5f">Application</text>
+<g font-family="monospace" font-size="14" fill="#405873">
+<text x="115" y="765">repoURL</text><text x="115" y="795">targetRevision</text><text x="115" y="825">path / chart</text><text x="115" y="855">destination cluster + namespace</text>
+</g>
+<rect x="410" y="690" width="305" height="185" rx="14" fill="#fff5f0" stroke="#f0d4c7"/>
+<text x="435" y="730" class="head">Sync policy choices</text>
+<text x="435" y="770" class="txt">• Manual or automated sync</text>
+<text x="435" y="802" class="txt">• Prune resources when configured</text>
+<text x="435" y="834" class="txt">• Self-heal when configured</text>
+<text x="435" y="862" class="small">Policy is an explicit operational decision</text>
+
+<rect x="800" y="610" width="745" height="315" rx="22" fill="#fff" stroke="#d7e2ef" filter="url(#shadow)"/>
+<text x="830" y="655" class="head">Operational workflow</text>
+<g>
+<rect x="840" y="700" width="145" height="85" rx="13" fill="#edf4ff" stroke="#d2e2f8"/>
+<text x="912" y="735" text-anchor="middle" class="head">Commit</text><text x="912" y="762" text-anchor="middle" class="small">change desired state</text>
+<path d="M985 742H1010" class="line"/>
+<rect x="1020" y="700" width="145" height="85" rx="13" fill="#edf4ff" stroke="#d2e2f8"/>
+<text x="1092" y="735" text-anchor="middle" class="head">Compare</text><text x="1092" y="762" text-anchor="middle" class="small">desired vs live</text>
+<path d="M1165 742H1190" class="line"/>
+<rect x="1200" y="700" width="145" height="85" rx="13" fill="#edf4ff" stroke="#d2e2f8"/>
+<text x="1272" y="735" text-anchor="middle" class="head">Sync</text><text x="1272" y="762" text-anchor="middle" class="small">apply manifests</text>
+<path d="M1345 742H1370" class="line"/>
+<rect x="1380" y="700" width="130" height="85" rx="13" fill="#edf8f3" stroke="#cde8d9"/>
+<text x="1445" y="735" text-anchor="middle" class="head">Verify</text><text x="1445" y="762" text-anchor="middle" class="small">health / rollout</text>
+</g>
+<text x="840" y="835" class="txt">Troubleshoot: repository access • manifest rendering • sync errors</text>
+<text x="840" y="865" class="txt">Kubernetes apply failures • unhealthy workloads • configuration drift</text>
+<text x="840" y="895" class="small">Use Argo CD history and Kubernetes events/logs to isolate the failing layer.</text>
+
+<text x="65" y="970" class="small">Conceptual architecture: verify repository paths, destinations, RBAC, sync options, and automated policies against the actual Argo CD configuration.</text>
+</svg>
