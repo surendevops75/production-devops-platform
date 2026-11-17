@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1550" height="920" viewBox="0 0 1550 920">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#edf3fa"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#18324b" flood-opacity=".12"/></filter>
+ <marker id="arr" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0 0 L11 5.5 L0 11Z" fill="#56738e"/></marker>
+ <style>
+ .h{font:700 34px Arial;fill:#17334d}.s{font:18px Arial;fill:#5b7186}.t{font:700 20px Arial;fill:#17334d}.d{font:16px Arial;fill:#405b73}
+ .card{fill:#fff;stroke:#cbd8e5;stroke-width:2;rx:16;filter:url(#shadow)}.line{stroke:#56738e;stroke-width:3;fill:none;marker-end:url(#arr)}
+ .pill{fill:#e9f2fb;stroke:#c4d7e8;stroke-width:1.5;rx:10}
+ </style>
+</defs>
+<rect width="1550" height="920" fill="url(#bg)"/>
+<text x="70" y="75" class="h">Jira Sprint Planning Workflow</text>
+<text x="70" y="112" class="s">Select realistic work, agree on a sprint goal and forecast delivery based on team capacity</text>
+
+<rect x="70" y="170" width="320" height="180" class="card"/>
+<text x="105" y="215" class="t">1. Review backlog</text>
+<text x="105" y="255" class="d">• Refined Stories</text>
+<text x="105" y="287" class="d">• Acceptance criteria</text>
+<text x="105" y="319" class="d">• Dependencies and priority</text>
+
+<rect x="455" y="170" width="320" height="180" class="card"/>
+<text x="490" y="215" class="t">2. Define sprint goal</text>
+<text x="490" y="255" class="d">• Desired outcome</text>
+<text x="490" y="287" class="d">• Value to be delivered</text>
+<text x="490" y="319" class="d">• Shared team understanding</text>
+
+<rect x="840" y="170" width="320" height="180" class="card"/>
+<text x="875" y="215" class="t">3. Check capacity</text>
+<text x="875" y="255" class="d">• Team availability</text>
+<text x="875" y="287" class="d">• Leave and support duties</text>
+<text x="875" y="319" class="d">• Historical velocity as guide</text>
+
+<rect x="1225" y="170" width="255" height="180" class="card"/>
+<text x="1260" y="215" class="t">4. Select work</text>
+<text x="1260" y="255" class="d">• Priority</text>
+<text x="1260" y="287" class="d">• Dependencies</text>
+<text x="1260" y="319" class="d">• Team forecast</text>
+
+<path d="M390 260 H445 M775 260 H830 M1160 260 H1215" class="line"/>
+<path d="M1350 350 V425 H1120" class="line"/>
+
+<rect x="760" y="425" width="720" height="190" class="card"/>
+<text x="800" y="470" class="t">5. Confirm sprint plan</text>
+<text x="800" y="510" class="d">Sprint example: Sprint 01 — Order Service Delivery</text>
+<text x="800" y="545" class="d">Duration: 2 weeks  |  Forecast: 20 story points (illustrative)</text>
+<text x="800" y="580" class="d">Selected work: API, validation, tests and deployment preparation</text>
+
+<path d="M760 520 H625 V685 H510" class="line"/>
+<rect x="70" y="685" width="440" height="145" class="card"/>
+<text x="110" y="730" class="t">Capacity mismatch?</text>
+<text x="110" y="770" class="d">Reduce or adjust the selected work.</text>
+<text x="110" y="800" class="d">Do not force an unrealistic forecast.</text>
+
+<path d="M1120 615 V685" class="line"/>
+<rect x="760" y="685" width="720" height="145" class="card"/>
+<text x="800" y="730" class="t">6. Start sprint execution</text>
+<text x="800" y="770" class="d">Daily coordination, board updates, testing and impediment removal.</text>
+<text x="800" y="800" class="d">Review progress against the sprint goal, not just ticket counts.</text>
+
+<text x="70" y="875" class="s">The sprint backlog is a team forecast. Scope changes should be discussed and managed transparently.</text>
+</svg>
