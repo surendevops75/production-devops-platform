@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#edf3fa"/></linearGradient>
+ <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#193454" flood-opacity=".12"/></filter>
+ <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#64748b"/></marker>
+ <style>
+ .title{font:700 30px Arial;fill:#14233b}.sub{font:16px Arial;fill:#53647c}.h{font:700 19px Arial;fill:#172b4d}.t{font:15px Arial;fill:#34465f}.s{font:13px Arial;fill:#52627a}.w{fill:#fff}
+ .card{fill:#fff;stroke:#d6e1ef;stroke-width:2;rx:17;filter:url(#sh)}.pill{fill:#f1f6fd;stroke:#cbd9eb;stroke-width:1.5;rx:10}.line{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#arr)}
+ </style>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<text x="65" y="65" class="title">Database Architecture</text>
+<text x="65" y="96" class="sub">Microservices data access • private connectivity • persistence • backup and recovery</text>
+
+<rect x="65" y="135" width="1470" height="90" rx="18" fill="#142d4d"/>
+<text x="95" y="171" class="w" style="font:700 20px Arial">DATA MANAGEMENT PRINCIPLES</text>
+<text x="95" y="200" class="w" style="font:15px Arial">Service-owned data • private network access • managed credentials • connection pooling • tested backups and restores</text>
+
+<!-- client services -->
+<rect x="65" y="295" width="370" height="340" class="card"/>
+<rect x="65" y="295" width="370" height="55" rx="17" fill="#1d4ed8"/>
+<text x="95" y="330" class="w" style="font:700 19px Arial">1  EKS microservices</text>
+<rect x="100" y="385" width="300" height="60" class="pill"/><text x="125" y="411" class="h">Application services</text><text x="125" y="432" class="s">21 services • independent workloads</text>
+<rect x="100" y="465" width="300" height="60" class="pill"/><text x="125" y="491" class="h">Database access layer</text><text x="125" y="512" class="s">Drivers • repositories • queries</text>
+<rect x="100" y="545" width="300" height="60" class="pill"/><text x="125" y="571" class="h">Connection pools</text><text x="125" y="592" class="s">HikariCP / app-specific pool*</text>
+
+<!-- security middle -->
+<rect x="500" y="295" width="330" height="340" class="card"/>
+<rect x="500" y="295" width="330" height="55" rx="17" fill="#7c3aed"/>
+<text x="530" y="330" class="w" style="font:700 19px Arial">2  Secure data access</text>
+<rect x="535" y="385" width="260" height="55" rx="11" fill="#f5f3ff" stroke="#ddd6fe"/><text x="560" y="419" class="t">Private subnet connectivity</text>
+<rect x="535" y="460" width="260" height="55" rx="11" fill="#f5f3ff" stroke="#ddd6fe"/><text x="560" y="494" class="t">Security Group rules</text>
+<rect x="535" y="535" width="260" height="55" rx="11" fill="#f5f3ff" stroke="#ddd6fe"/><text x="560" y="569" class="t">Secrets / IAM permissions*</text>
+
+<!-- database layer -->
+<rect x="895" y="295" width="640" height="340" class="card"/>
+<rect x="895" y="295" width="640" height="55" rx="17" fill="#0f766e"/>
+<text x="925" y="330" class="w" style="font:700 19px Arial">3  Persistence and data services</text>
+<rect x="930" y="385" width="270" height="90" rx="13" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+<ellipse cx="975" cy="418" rx="24" ry="10" fill="#a7f3d0" stroke="#059669" stroke-width="2"/><path d="M951 418v25c0 6 11 11 24 11s24-5 24-11v-25" fill="#a7f3d0" stroke="#059669" stroke-width="2"/>
+<text x="1020" y="420" class="h">Amazon RDS</text><text x="1020" y="446" class="s">Relational database*</text>
+<rect x="1230" y="385" width="270" height="90" rx="13" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+<path d="M1260 411h44v38h-44zM1260 420h44M1260 430h44" stroke="#2563eb" stroke-width="2" fill="none"/>
+<text x="1320" y="420" class="h">Redis</text><text x="1320" y="446" class="s">Cache / transient data*</text>
+<rect x="930" y="500" width="570" height="85" rx="13" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<text x="960" y="535" class="h">Data ownership and schema management</text><text x="960" y="560" class="s">Separate credentials • migrations • retention • consistency</text>
+
+<path d="M435 465H490" class="line"/><path d="M830 465H885" class="line"/>
+
+<!-- backup / operations -->
+<rect x="65" y="700" width="1470" height="190" rx="18" fill="#fff" stroke="#d6e1ef" stroke-width="2" filter="url(#sh)"/>
+<text x="95" y="742" class="h">4  Operations, protection and recovery</text>
+<rect x="100" y="770" width="300" height="80" rx="12" fill="#eff6ff" stroke="#bfdbfe"/><text x="125" y="803" class="h">Backups / snapshots</text><text x="125" y="827" class="s">Retention • restore testing</text>
+<rect x="445" y="770" width="300" height="80" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/><text x="470" y="803" class="h">Monitoring</text><text x="470" y="827" class="s">Connections • latency • errors</text>
+<rect x="790" y="770" width="300" height="80" rx="12" fill="#f5f3ff" stroke="#ddd6fe"/><text x="815" y="803" class="h">Security</text><text x="815" y="827" class="s">Encryption • access review</text>
+<rect x="1135" y="770" width="350" height="80" rx="12" fill="#fff7ed" stroke="#fed7aa"/><text x="1160" y="803" class="h">Recovery validation</text><text x="1160" y="827" class="s">Integrity • application smoke tests</text>
+<text x="65" y="945" class="s">* Confirm database engines, cache deployment, connection-pool technology, secrets integration and backup implementation in the actual project.</text>
+</svg>
