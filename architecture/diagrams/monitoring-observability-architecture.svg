@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1080" viewBox="0 0 1700 1080">
+<defs>
+<marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#388b45"/></marker>
+<marker id="p" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#7952a3"/></marker>
+<marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3z" fill="#2874c8"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#172b4d}.title{font-size:29px;font-weight:700}.sub{font-size:14px;fill:#536579}.section{font-size:19px;font-weight:700}.head{font-size:14px;font-weight:700}.body{font-size:12px}.tiny{font-size:10px;fill:#536579}
+.g{fill:none;stroke:#388b45;stroke-width:2.6;marker-end:url(#g)}.p{fill:none;stroke:#7952a3;stroke-width:2.6;marker-end:url(#p)}.b{fill:none;stroke:#2874c8;stroke-width:2.6;marker-end:url(#b)}
+</style></defs>
+<rect width="100%" height="100%" fill="#fff"/>
+<text x="850" y="42" text-anchor="middle" class="title">production-devops-platform — Monitoring &amp; Observability Architecture</text>
+<text x="850" y="68" text-anchor="middle" class="sub">Metrics and alerting with Prometheus stack | Centralized logs with ELK stack</text>
+
+<!-- EKS workloads -->
+<rect x="30" y="125" width="405" height="740" rx="15" fill="#f2faf2" stroke="#388b45" stroke-width="2"/>
+<g transform="translate(55 145)"><path d="M25 0 L48 13 V40 L25 53 L2 40 V13Z" fill="#438b45"/><path d="M25 9 L39 17 V35 L25 44 L11 35 V17Z" fill="none" stroke="#fff" stroke-width="2"/></g>
+<text x="120" y="180" class="section">Amazon EKS</text>
+<text x="230" y="210" text-anchor="middle" class="tiny">Application and platform workloads</text>
+<rect x="65" y="240" width="335" height="160" rx="10" fill="#fff" stroke="#7cab7c"/>
+<text x="232" y="270" text-anchor="middle" class="head">21 Microservices</text>
+<g fill="#e7f3e7" stroke="#388b45" stroke-width="1.5">
+<rect x="90" y="290" width="125" height="38" rx="6"/><rect x="245" y="290" width="125" height="38" rx="6"/>
+<rect x="90" y="342" width="125" height="38" rx="6"/><rect x="245" y="342" width="125" height="38" rx="6"/>
+</g>
+<g class="body" text-anchor="middle"><text x="152" y="314">User / Catalog</text><text x="307" y="314">Cart / Order</text><text x="152" y="366">Payment / Inventory</text><text x="307" y="366">Other Services</text></g>
+<rect x="65" y="425" width="335" height="145" rx="10" fill="#fff" stroke="#7cab7c"/>
+<text x="232" y="455" text-anchor="middle" class="head">Kubernetes &amp; Node Metrics</text>
+<g class="body" text-anchor="middle"><text x="150" y="490">Node Exporter</text><text x="315" y="490">kube-state-metrics</text><text x="232" y="530">Kubelet / cAdvisor metrics</text></g>
+<circle cx="150" cy="470" r="13" fill="#e8f5e9" stroke="#388b45"/><path d="M142 470 H158 M150 462 V478" stroke="#388b45" stroke-width="2"/>
+<circle cx="315" cy="470" r="13" fill="#e8f5e9" stroke="#388b45"/><path d="M307 470 H323 M315 462 V478" stroke="#388b45" stroke-width="2"/>
+<rect x="65" y="595" width="335" height="220" rx="10" fill="#fff" stroke="#7cab7c"/>
+<text x="232" y="625" text-anchor="middle" class="head">Log Collection</text>
+<g transform="translate(95 650)" fill="none" stroke="#2874c8" stroke-width="2.5"><path d="M0 12 Q25 -3 50 12 Q50 48 25 48 Q0 48 0 12Z"/><path d="M8 18 H42 M8 28 H42 M8 38 H34"/></g>
+<text x="240" y="675" class="head">Fluent Bit</text><text x="240" y="698" class="tiny">DaemonSet / log forwarder</text>
+<text x="232" y="760" text-anchor="middle" class="tiny">Collect container and node logs</text>
+
+<!-- metrics path -->
+<rect x="535" y="125" width="500" height="330" rx="15" fill="#f6fbf6" stroke="#388b45" stroke-width="2"/>
+<text x="785" y="160" text-anchor="middle" class="section">Metrics &amp; Alerting Stack</text>
+<rect x="575" y="195" width="185" height="95" rx="9" fill="#fff" stroke="#7cab7c"/>
+<circle cx="620" cy="235" r="20" fill="#e8f5e9" stroke="#388b45" stroke-width="2"/><path d="M608 235 Q620 217 632 235 Q620 253 608 235Z" fill="none" stroke="#388b45" stroke-width="2"/>
+<text x="690" y="231" text-anchor="middle" class="head">Prometheus</text><text x="690" y="253" text-anchor="middle" class="tiny">Scrape / store metrics</text>
+<rect x="805" y="195" width="185" height="95" rx="9" fill="#fff" stroke="#7cab7c"/>
+<circle cx="850" cy="235" r="20" fill="#fff3e7" stroke="#df7b24" stroke-width="2"/><path d="M840 244 V232 L850 224 L860 232 V244" fill="none" stroke="#df7b24" stroke-width="2"/>
+<text x="925" y="231" text-anchor="middle" class="head">Grafana</text><text x="925" y="253" text-anchor="middle" class="tiny">Dashboards / PromQL</text>
+<rect x="690" y="335" width="190" height="85" rx="9" fill="#fff" stroke="#c84d4d"/>
+<circle cx="730" cy="377" r="18" fill="#fff0f0" stroke="#c84d4d" stroke-width="2"/><path d="M730 364 V378 L740 384" fill="none" stroke="#c84d4d" stroke-width="2"/>
+<text x="805" y="374" text-anchor="middle" class="head">Alertmanager</text><text x="805" y="395" text-anchor="middle" class="tiny">Route / group / silence alerts</text>
+
+<!-- logging -->
+<rect x="1090" y="125" width="580" height="330" rx="15" fill="#f7f9ff" stroke="#2874c8" stroke-width="2"/>
+<text x="1380" y="160" text-anchor="middle" class="section">Centralized Logging — ELK Stack</text>
+<g>
+<rect x="1120" y="215" width="115" height="110" rx="9" fill="#fff" stroke="#6c9bd1"/>
+<rect x="1260" y="215" width="115" height="110" rx="9" fill="#fff" stroke="#6c9bd1"/>
+<rect x="1400" y="215" width="115" height="110" rx="9" fill="#fff" stroke="#6c9bd1"/>
+<rect x="1540" y="215" width="100" height="110" rx="9" fill="#fff" stroke="#6c9bd1"/>
+</g>
+<g class="head" text-anchor="middle"><text x="1177" y="270">Fluent Bit</text><text x="1317" y="270">Logstash</text><text x="1457" y="270">Elasticsearch</text><text x="1590" y="270">Kibana</text></g>
+<g class="tiny" text-anchor="middle"><text x="1177" y="292">Collect</text><text x="1317" y="292">Parse / enrich</text><text x="1457" y="292">Index / search</text><text x="1590" y="292">Explore</text></g>
+<path d="M1235 270 H1260" class="b"/><path d="M1375 270 H1400" class="b"/><path d="M1515 270 H1540" class="b"/>
+<text x="1380" y="375" text-anchor="middle" class="tiny">Structured logs • parsing • indexing • dashboards</text>
+
+<!-- workflow and operations -->
+<rect x="535" y="520" width="1135" height="345" rx="15" fill="#fbfcfe" stroke="#9aa9b8" stroke-width="1.5"/>
+<text x="1102" y="560" text-anchor="middle" class="section">Monitoring &amp; Incident Response Workflow</text>
+<g>
+<rect x="575" y="610" width="235" height="115" rx="9" fill="#fff" stroke="#7cab7c"/>
+<text x="692" y="645" text-anchor="middle" class="head">1. Collect</text><text x="692" y="671" text-anchor="middle" class="body">Metrics and logs</text><text x="692" y="694" text-anchor="middle" class="tiny">Targets / exporters / agents</text>
+<rect x="850" y="610" width="235" height="115" rx="9" fill="#fff" stroke="#7cab7c"/>
+<text x="967" y="645" text-anchor="middle" class="head">2. Analyze</text><text x="967" y="671" text-anchor="middle" class="body">Dashboards and queries</text><text x="967" y="694" text-anchor="middle" class="tiny">PromQL / log search</text>
+<rect x="1125" y="610" width="235" height="115" rx="9" fill="#fff" stroke="#c84d4d"/>
+<text x="1242" y="645" text-anchor="middle" class="head">3. Alert</text><text x="1242" y="671" text-anchor="middle" class="body">Threshold / rule evaluation</text><text x="1242" y="694" text-anchor="middle" class="tiny">Alertmanager routing</text>
+<rect x="1400" y="610" width="235" height="115" rx="9" fill="#fff" stroke="#7952a3"/>
+<text x="1517" y="645" text-anchor="middle" class="head">4. Investigate</text><text x="1517" y="671" text-anchor="middle" class="body">Correlate metrics and logs</text><text x="1517" y="694" text-anchor="middle" class="tiny">Troubleshoot / RCA</text>
+</g>
+<path d="M810 667 H850" class="g"/><path d="M1085 667 H1125" class="g"/><path d="M1360 667 H1400" class="p"/>
+<rect x="575" y="765" width="1060" height="65" rx="8" fill="#f2f6fb" stroke="#9aa9b8"/>
+<text x="1105" y="791" text-anchor="middle" class="head">Operational Outcomes</text>
+<text x="1105" y="813" text-anchor="middle" class="body">Service availability • resource utilization • error rates • latency • capacity trends • incident evidence</text>
+
+<!-- flows -->
+<path d="M435 475 H485 V240 H535" class="g"/>
+<text x="485" y="225" class="tiny">Metrics scrape</text>
+<path d="M435 700 H1090" class="b"/>
+<text x="760" y="687" class="tiny">Log forwarding</text>
+<path d="M760 290 V335" class="g"/>
+<path d="M1035 240 H1090" class="g" stroke-dasharray="5 4"/>
+<text x="1062" y="225" class="tiny">Dashboard queries</text>
+<path d="M880 377 H1125 V610" class="p"/>
+<text x="1000" y="365" class="tiny">Alert notifications</text>
+<text x="850" y="1005" text-anchor="middle" class="tiny">Project observability stack: Prometheus, Grafana, Alertmanager, Fluent Bit, Logstash, Elasticsearch and Kibana.</text>
+<text x="850" y="1028" text-anchor="middle" class="tiny">Exporter installation, scrape targets, retention, storage and alert routing are defined in implementation configuration.</text>
+</svg>
