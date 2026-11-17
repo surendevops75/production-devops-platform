@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#edf3fa"/></linearGradient>
+ <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#193454" flood-opacity=".12"/></filter>
+ <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#64748b"/></marker>
+ <style>
+ .title{font:700 30px Arial;fill:#14233b}.sub{font:16px Arial;fill:#53647c}.h{font:700 19px Arial;fill:#172b4d}.t{font:15px Arial;fill:#34465f}.s{font:13px Arial;fill:#52627a}.w{fill:#fff}
+ .card{fill:#fff;stroke:#d6e1ef;stroke-width:2;rx:17;filter:url(#sh)}.pill{fill:#f1f6fd;stroke:#cbd9eb;stroke-width:1.5;rx:10}.line{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#arr)}
+ </style>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<text x="65" y="65" class="title">Messaging Architecture</text>
+<text x="65" y="96" class="sub">Asynchronous communication • event distribution • buffering • reliable message processing</text>
+<rect x="65" y="130" width="1470" height="88" rx="18" fill="#142d4d"/>
+<text x="95" y="167" class="w" style="font:700 20px Arial">MESSAGING DESIGN PRINCIPLES</text>
+<text x="95" y="195" class="w" style="font:15px Arial">Decouple services • define delivery semantics • handle retries and duplicates • monitor consumer lag and queue depth</text>
+
+<!-- producers -->
+<rect x="65" y="285" width="330" height="300" class="card"/>
+<rect x="65" y="285" width="330" height="55" rx="17" fill="#1d4ed8"/>
+<text x="95" y="320" class="w" style="font:700 19px Arial">1  Producers</text>
+<rect x="100" y="375" width="260" height="55" class="pill"/><text x="125" y="409" class="t">Order Service</text>
+<rect x="100" y="450" width="260" height="55" class="pill"/><text x="125" y="484" class="t">Payment Service</text>
+<rect x="100" y="525" width="260" height="40" class="pill"/><text x="125" y="551" class="t">Inventory / Other Services</text>
+
+<!-- broker -->
+<rect x="475" y="285" width="650" height="300" class="card"/>
+<rect x="475" y="285" width="650" height="55" rx="17" fill="#0f766e"/>
+<text x="505" y="320" class="w" style="font:700 19px Arial">2  Messaging / event backbone</text>
+<rect x="515" y="375" width="270" height="155" rx="14" fill="#ecfdf5" stroke="#86efac" stroke-width="2"/>
+<circle cx="560" cy="420" r="22" fill="#059669"/><path d="M548 420h24M560 408v24" stroke="#fff" stroke-width="3"/>
+<text x="600" y="419" class="h">RabbitMQ</text><text x="540" y="465" class="s">Exchanges • queues</text><text x="540" y="488" class="s">Routing • acknowledgements</text><text x="540" y="511" class="s">Work queues / task delivery</text>
+<rect x="815" y="375" width="270" height="155" rx="14" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+<rect x="850" y="400" width="30" height="38" rx="5" fill="#d97706"/><rect x="887" y="400" width="30" height="38" rx="5" fill="#f59e0b"/><rect x="924" y="400" width="30" height="38" rx="5" fill="#fbbf24"/>
+<text x="975" y="419" class="h">Kafka</text><text x="840" y="465" class="s">Topics • partitions</text><text x="840" y="488" class="s">Consumer groups • offsets</text><text x="840" y="511" class="s">Event streams / replay</text>
+
+<!-- consumers -->
+<rect x="1205" y="285" width="330" height="300" class="card"/>
+<rect x="1205" y="285" width="330" height="55" rx="17" fill="#7c3aed"/>
+<text x="1235" y="320" class="w" style="font:700 19px Arial">3  Consumers</text>
+<rect x="1240" y="375" width="260" height="55" class="pill"/><text x="1265" y="409" class="t">Notification Service</text>
+<rect x="1240" y="450" width="260" height="55" class="pill"/><text x="1265" y="484" class="t">Inventory / Fulfillment</text>
+<rect x="1240" y="525" width="260" height="40" class="pill"/><text x="1265" y="551" class="t">Analytics / Other Services</text>
+
+<path d="M395 435H465" class="line"/><path d="M1125 435H1195" class="line"/>
+
+<!-- cloud managed option -->
+<rect x="65" y="650" width="465" height="220" class="card"/>
+<rect x="65" y="650" width="465" height="52" rx="17" fill="#b45309"/>
+<text x="95" y="684" class="w" style="font:700 19px Arial">4  AWS messaging services</text>
+<rect x="100" y="730" width="185" height="55" rx="11" fill="#fff7ed" stroke="#fdba74"/><text x="125" y="764" class="h">SQS</text>
+<rect x="310" y="730" width="185" height="55" rx="11" fill="#fff7ed" stroke="#fdba74"/><text x="335" y="764" class="h">SNS</text>
+<text x="100" y="820" class="s">Managed queues and pub/sub options</text><text x="100" y="842" class="s">Use only where the application needs them</text>
+
+<!-- reliability -->
+<rect x="590" y="650" width="945" height="220" class="card"/>
+<text x="625" y="690" class="h">5  Reliability and operations</text>
+<rect x="625" y="725" width="195" height="85" rx="11" fill="#eff6ff" stroke="#bfdbfe"/><text x="645" y="758" class="h">Retry policy</text><text x="645" y="783" class="s">Backoff • max attempts</text>
+<rect x="845" y="725" width="195" height="85" rx="11" fill="#eff6ff" stroke="#bfdbfe"/><text x="865" y="758" class="h">Dead-letter queue</text><text x="865" y="783" class="s">Poison message handling</text>
+<rect x="1065" y="725" width="195" height="85" rx="11" fill="#eff6ff" stroke="#bfdbfe"/><text x="1085" y="758" class="h">Idempotency</text><text x="1085" y="783" class="s">Duplicate protection</text>
+<rect x="1285" y="725" width="210" height="85" rx="11" fill="#eff6ff" stroke="#bfdbfe"/><text x="1305" y="758" class="h">Monitoring</text><text x="1305" y="783" class="s">Queue depth • lag • errors</text>
+<text x="65" y="930" class="s">Design note: RabbitMQ, Kafka, SQS and SNS are different options, not interchangeable components. Select and deploy only those required by the actual application.</text>
+</svg>
