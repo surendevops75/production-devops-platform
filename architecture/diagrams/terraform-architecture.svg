@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#edf2fa"/></linearGradient>
+ <linearGradient id="tf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8b5cf6"/><stop offset="1" stop-color="#6d28d9"/></linearGradient>
+ <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#193454" flood-opacity=".12"/></filter>
+ <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#64748b"/></marker>
+ <style>
+ .title{font:700 30px Arial;fill:#14233b}.sub{font:16px Arial;fill:#53647c}.h{font:700 19px Arial;fill:#172b4d}.t{font:15px Arial;fill:#34465f}.s{font:13px Arial;fill:#52627a}.w{fill:#fff}
+ .card{fill:#fff;stroke:#d6e1ef;stroke-width:2;rx:17;filter:url(#sh)}.pill{fill:#f5f3ff;stroke:#ddd6fe;stroke-width:1.5;rx:10}.line{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#arr)}
+ </style>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<text x="65" y="65" class="title">Terraform Infrastructure as Code Architecture</text>
+<text x="65" y="96" class="sub">Version-controlled infrastructure • reusable modules • remote state • reviewed environment changes</text>
+
+<rect x="65" y="135" width="285" height="185" class="card"/>
+<rect x="65" y="135" width="285" height="52" rx="17" fill="#172b4d"/>
+<text x="90" y="169" class="w" style="font:700 19px Arial">1  Source control</text>
+<circle cx="115" cy="230" r="22" fill="#24292f"/><path d="M104 225l11-7 11 7v13l-11 7-11-7z" fill="none" stroke="#fff" stroke-width="2"/>
+<text x="155" y="229" class="h">GitHub repository</text><text x="155" y="253" class="s">Terraform code and reviews</text>
+<text x="95" y="290" class="s">Branches • pull requests • version history</text>
+
+<rect x="405" y="135" width="330" height="185" class="card"/>
+<rect x="405" y="135" width="330" height="52" rx="17" fill="url(#tf)"/>
+<text x="430" y="169" class="w" style="font:700 19px Arial">2  Terraform workflow</text>
+<rect x="440" y="210" width="260" height="42" class="pill"/><text x="460" y="237" class="t">fmt • validate • init</text>
+<rect x="440" y="265" width="260" height="38" class="pill"/><text x="460" y="290" class="t">plan • review • apply</text>
+
+<rect x="790" y="135" width="330" height="185" class="card"/>
+<rect x="790" y="135" width="330" height="52" rx="17" fill="#0f766e"/>
+<text x="815" y="169" class="w" style="font:700 19px Arial">3  Remote state</text>
+<path d="M845 225c0-13 28-23 62-23s62 10 62 23-28 23-62 23-62-10-62-23zm0 0v48c0 13 28 23 62 23s62-10 62-23v-48" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+<text x="990" y="230" class="h">Amazon S3</text><text x="990" y="255" class="s">State storage</text><text x="990" y="279" class="s">Locking/versioning*</text>
+
+<rect x="1175" y="135" width="360" height="185" class="card"/>
+<rect x="1175" y="135" width="360" height="52" rx="17" fill="#b45309"/>
+<text x="1200" y="169" class="w" style="font:700 19px Arial">4  AWS provider access</text>
+<path d="M1215 235l35-20 35 20v40l-35 20-35-20z" fill="#ffedd5" stroke="#d97706" stroke-width="2"/>
+<text x="1270" y="240" class="h">IAM role</text><text x="1270" y="264" class="s">Least privilege</text><text x="1205" y="300" class="s">OIDC / approved credentials*</text>
+
+<path d="M350 225H395" class="line"/><path d="M735 225H780" class="line"/><path d="M1120 225H1165" class="line"/>
+
+<!-- modules -->
+<rect x="65" y="390" width="680" height="390" class="card"/>
+<rect x="65" y="390" width="680" height="55" rx="17" fill="#334155"/>
+<text x="95" y="425" class="w" style="font:700 20px Arial">Reusable Terraform modules</text>
+<rect x="100" y="480" width="270" height="75" class="pill"/><text x="125" y="510" class="h">VPC module</text><text x="125" y="535" class="s">Subnets • routes • gateways</text>
+<rect x="410" y="480" width="290" height="75" class="pill"/><text x="435" y="510" class="h">EKS module</text><text x="435" y="535" class="s">Cluster • node groups</text>
+<rect x="100" y="580" width="270" height="75" class="pill"/><text x="125" y="610" class="h">IAM module</text><text x="125" y="635" class="s">Roles • policies</text>
+<rect x="410" y="580" width="290" height="75" class="pill"/><text x="435" y="610" class="h">Data module</text><text x="435" y="635" class="s">RDS and supporting resources*</text>
+<text x="100" y="710" class="s">Inputs • outputs • variables • outputs • module versioning</text>
+<text x="100" y="740" class="s">Keep modules reusable; keep environment-specific values outside modules.</text>
+
+<!-- env -->
+<rect x="800" y="390" width="735" height="390" class="card"/>
+<rect x="800" y="390" width="735" height="55" rx="17" fill="#1d4ed8"/>
+<text x="830" y="425" class="w" style="font:700 20px Arial">Environment configuration</text>
+<rect x="845" y="485" width="285" height="85" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/><text x="875" y="518" class="h">Development</text><text x="875" y="545" class="s">terraform.tfvars • dev</text>
+<rect x="1200" y="485" width="285" height="85" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/><text x="1230" y="518" class="h">QA / Staging</text><text x="1230" y="545" class="s">Environment-specific values</text>
+<rect x="845" y="610" width="285" height="85" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/><text x="875" y="643" class="h">Production</text><text x="875" y="670" class="s">Approval-gated changes</text>
+<rect x="1200" y="610" width="285" height="85" rx="12" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/><text x="1230" y="643" class="h">AWS resources</text><text x="1230" y="670" class="s">VPC • EKS • IAM • data*</text>
+
+<path d="M570 320V365H405V380" class="line"/>
+<path d="M950 320V365H1140V380" class="line"/>
+<path d="M745 585H790" class="line"/>
+<path d="M1130 652H1190" class="line"/>
+
+<rect x="65" y="835" width="1470" height="90" rx="17" fill="#142d4d"/>
+<text x="95" y="873" class="w" style="font:700 18px Arial">SAFE CHANGE FLOW</text>
+<text x="95" y="900" class="w" style="font:15px Arial">Pull request → automated checks → terraform plan review → approved apply → verify AWS resources → record outputs</text>
+<text x="800" y="965" class="s">* Locking mechanism, OIDC authentication, module set and environment strategy must match the actual repository and backend configuration.</text>
+</svg>
