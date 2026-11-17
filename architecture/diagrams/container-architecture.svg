@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#edf3fa"/></linearGradient>
+ <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#193454" flood-opacity=".12"/></filter>
+ <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#64748b"/></marker>
+ <style>
+ .title{font:700 30px Arial;fill:#14233b}.sub{font:16px Arial;fill:#53647c}.h{font:700 19px Arial;fill:#172b4d}.t{font:15px Arial;fill:#34465f}.s{font:13px Arial;fill:#52627a}.w{fill:#fff}
+ .card{fill:#fff;stroke:#d6e1ef;stroke-width:2;rx:17;filter:url(#sh)}.pill{fill:#eff6ff;stroke:#bfdbfe;stroke-width:1.5;rx:10}.line{stroke:#64748b;stroke-width:3;fill:none;marker-end:url(#arr)}
+ </style>
+</defs>
+<rect width="1600" height="1000" fill="url(#bg)"/>
+<text x="65" y="65" class="title">Container Architecture — Docker and Amazon ECR</text>
+<text x="65" y="96" class="sub">Build once • scan and tag images • publish to registry • pull approved images into EKS</text>
+<rect x="65" y="130" width="1470" height="88" rx="18" fill="#142d4d"/>
+<text x="95" y="167" class="w" style="font:700 20px Arial">CONTAINER DELIVERY PRINCIPLES</text>
+<text x="95" y="195" class="w" style="font:15px Arial">Reproducible builds • immutable image tags • vulnerability scanning • least-privilege registry access • controlled rollout</text>
+
+<!-- source -->
+<rect x="65" y="285" width="300" height="285" class="card"/>
+<rect x="65" y="285" width="300" height="55" rx="17" fill="#172b4d"/>
+<text x="95" y="320" class="w" style="font:700 19px Arial">1  Source code</text>
+<circle cx="120" cy="395" r="22" fill="#24292f"/><path d="M109 389l11-7 11 7v13l-11 7-11-7z" fill="none" stroke="#fff" stroke-width="2"/>
+<text x="160" y="395" class="h">GitHub</text><text x="160" y="420" class="s">Application repositories</text>
+<rect x="100" y="465" width="230" height="55" class="pill"/><text x="125" y="499" class="t">Dockerfile + source</text>
+
+<!-- build -->
+<rect x="425" y="285" width="330" height="285" class="card"/>
+<rect x="425" y="285" width="330" height="55" rx="17" fill="#2563eb"/>
+<text x="455" y="320" class="w" style="font:700 19px Arial">2  Docker build</text>
+<rect x="465" y="375" width="250" height="58" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
+<path d="M490 395h28v18h-28zM496 388h16v7h-16z" fill="#2563eb"/>
+<text x="535" y="411" class="h">Build image</text>
+<rect x="465" y="455" width="250" height="58" rx="12" fill="#eff6ff" stroke="#93c5fd"/>
+<text x="490" y="490" class="t">Tag • test • scan</text>
+<text x="465" y="545" class="s">One image per service / version</text>
+
+<!-- registry -->
+<rect x="815" y="285" width="330" height="285" class="card"/>
+<rect x="815" y="285" width="330" height="55" rx="17" fill="#b45309"/>
+<text x="845" y="320" class="w" style="font:700 19px Arial">3  Amazon ECR</text>
+<path d="M865 390h58l18 15v54h-76z" fill="#ffedd5" stroke="#d97706" stroke-width="2"/><path d="M865 405h76M884 390v69M903 390v69" stroke="#d97706" stroke-width="2"/>
+<text x="960" y="410" class="h">Private registry</text><text x="960" y="435" class="s">Repositories / image tags</text>
+<rect x="855" y="485" width="250" height="50" class="pill"/><text x="880" y="516" class="t">Retention • access policy</text>
+
+<!-- cluster -->
+<rect x="1205" y="285" width="330" height="285" class="card"/>
+<rect x="1205" y="285" width="330" height="55" rx="17" fill="#0f766e"/>
+<text x="1235" y="320" class="w" style="font:700 19px Arial">4  Amazon EKS</text>
+<polygon points="1250,400 1265,375 1295,375 1310,400 1295,425 1265,425" fill="#326ce5"/>
+<text x="1258" y="406" class="w" style="font:700 13px Arial">K8s</text>
+<text x="1330" y="400" class="h">Kubernetes</text><text x="1330" y="425" class="s">Pull image and run pods</text>
+<rect x="1245" y="485" width="250" height="50" class="pill"/><text x="1270" y="516" class="t">21 microservices</text>
+
+<path d="M365 425H415" class="line"/><path d="M755 425H805" class="line"/><path d="M1145 425H1195" class="line"/>
+
+<!-- bottom security and ops -->
+<rect x="65" y="650" width="1470" height="220" rx="18" fill="#fff" stroke="#d6e1ef" stroke-width="2" filter="url(#sh)"/>
+<text x="95" y="690" class="h">5  Image security and runtime controls</text>
+<rect x="100" y="725" width="250" height="90" rx="12" fill="#fef2f2" stroke="#fecaca"/><text x="125" y="760" class="h">Trivy scanning</text><text x="125" y="787" class="s">Image vulnerabilities*</text>
+<rect x="390" y="725" width="250" height="90" rx="12" fill="#eff6ff" stroke="#bfdbfe"/><text x="415" y="760" class="h">Image provenance</text><text x="415" y="787" class="s">Tags / digest / traceability</text>
+<rect x="680" y="725" width="250" height="90" rx="12" fill="#f0fdf4" stroke="#bbf7d0"/><text x="705" y="760" class="h">ECR permissions</text><text x="705" y="787" class="s">IAM pull / push access</text>
+<rect x="970" y="725" width="250" height="90" rx="12" fill="#f5f3ff" stroke="#ddd6fe"/><text x="995" y="760" class="h">Kubernetes runtime</text><text x="995" y="787" class="s">Non-root / resource limits*</text>
+<rect x="1260" y="725" width="235" height="90" rx="12" fill="#fff7ed" stroke="#fed7aa"/><text x="1285" y="760" class="h">Lifecycle</text><text x="1285" y="787" class="s">Cleanup / retention</text>
+<text x="65" y="930" class="s">* Security gates and runtime hardening are target practices; confirm actual workflow configuration, policies and deployment manifests.</text>
+</svg>
