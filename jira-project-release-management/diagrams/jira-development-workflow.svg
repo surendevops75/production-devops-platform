@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f8fafc"/><stop offset="1" stop-color="#edf3fa"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#18324b" flood-opacity=".12"/></filter>
+ <marker id="arr" markerWidth="11" markerHeight="11" refX="9" refY="5.5" orient="auto"><path d="M0 0 L11 5.5 L0 11Z" fill="#56738e"/></marker>
+ <style>
+ .h{font:700 34px Arial;fill:#17334d}.s{font:18px Arial;fill:#5b7186}.t{font:700 20px Arial;fill:#17334d}.d{font:16px Arial;fill:#405b73}
+ .card{fill:#fff;stroke:#cbd8e5;stroke-width:2;rx:16;filter:url(#shadow)}
+ .line{stroke:#56738e;stroke-width:3;fill:none;marker-end:url(#arr)}
+ .jira{fill:#e8f1ff;stroke:#548ed0;stroke-width:2;rx:14}
+ .git{fill:#fff0e8;stroke:#d68a53;stroke-width:2;rx:14}
+ .ci{fill:#e9f6ed;stroke:#5a9b70;stroke-width:2;rx:14}
+ .note{font:14px Arial;fill:#5b7186}
+ </style>
+</defs>
+<rect width="1600" height="980" fill="url(#bg)"/>
+<text x="70" y="75" class="h">Jira-to-GitHub Development Workflow</text>
+<text x="70" y="112" class="s">Trace each engineering change from an approved Jira issue through code review and CI validation</text>
+
+<rect x="70" y="175" width="330" height="175" class="jira"/>
+<text x="105" y="220" class="t">1. Jira issue assigned</text>
+<text x="105" y="260" class="d">PLAT-201 — Add order validation</text>
+<text x="105" y="292" class="d">Acceptance criteria and owner</text>
+<text x="105" y="324" class="d">Status: To Do → In Progress</text>
+
+<rect x="465" y="175" width="330" height="175" class="git"/>
+<text x="500" y="220" class="t">2. Create Git branch</text>
+<text x="500" y="260" class="d">feature/PLAT-201-order-validation</text>
+<text x="500" y="292" class="d">Work from the agreed base branch</text>
+<text x="500" y="324" class="d">Keep the change focused</text>
+
+<rect x="860" y="175" width="330" height="175" class="git"/>
+<text x="895" y="220" class="t">3. Develop and commit</text>
+<text x="895" y="260" class="d">Implement and test the change</text>
+<text x="895" y="292" class="d">Commit with Jira issue key</text>
+<text x="895" y="324" class="d">Push feature branch to GitHub</text>
+
+<rect x="1255" y="175" width="275" height="175" class="git"/>
+<text x="1290" y="220" class="t">4. Open PR</text>
+<text x="1290" y="260" class="d">Link PLAT-201</text>
+<text x="1290" y="292" class="d">Describe changes and tests</text>
+<text x="1290" y="324" class="d">Request reviewers</text>
+
+<path d="M400 262 H455 M795 262 H850 M1190 262 H1245" class="line"/>
+<path d="M1390 350 V430 H1190" class="line"/>
+
+<rect x="850" y="430" width="680" height="185" class="ci"/>
+<text x="890" y="475" class="t">5. Review and CI validation</text>
+<text x="890" y="515" class="d">• Peer review and required approvals</text>
+<text x="890" y="547" class="d">• GitHub Actions build and automated tests</text>
+<text x="890" y="579" class="d">• Configured quality and security checks</text>
+
+<path d="M850 520 H650 V680 H520" class="line"/>
+<rect x="70" y="680" width="450" height="165" class="card"/>
+<text x="110" y="725" class="t">Checks fail or changes requested</text>
+<text x="110" y="765" class="d">Fix the code, push new commits and rerun checks.</text>
+<text x="110" y="800" class="d">Keep Jira work In Progress or Code Review.</text>
+
+<path d="M1190 615 V680" class="line"/>
+<rect x="850" y="680" width="680" height="165" class="card"/>
+<text x="890" y="725" class="t">6. Merge approved pull request</text>
+<text x="890" y="765" class="d">Merge using the repository's protected-branch policy.</text>
+<text x="890" y="800" class="d">Update Jira to the agreed next status, such as QA Testing.</text>
+
+<path d="M1190 845 V890 H800" class="line"/>
+<rect x="330" y="890" width="940" height="65" class="jira"/>
+<text x="800" y="930" text-anchor="middle" class="t">7. Jira reflects verified development progress — QA and release follow in later stages</text>
+
+<text x="70" y="945" class="note">Note: Jira status transitions and GitHub linking require the relevant project workflow and integration configuration.</text>
+</svg>

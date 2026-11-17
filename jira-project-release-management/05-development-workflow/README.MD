@@ -1,5 +1,9 @@
 # 05 — Jira Development Workflow
 
+## Development Workflow Architecture
+
+![Jira Development Workflow](../diagrams/jira-development-workflow.svg)
+
 ## 1. Objective
 
 This chapter explains how developers work on Jira issues and connect their development activities with GitHub.
