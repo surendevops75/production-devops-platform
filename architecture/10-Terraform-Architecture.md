@@ -1,4 +1,4 @@
-# 09 — Infrastructure as Code (Terraform) Architecture
+# 10 — Infrastructure as Code (Terraform) Architecture
 
 ## 1. Overview
 
