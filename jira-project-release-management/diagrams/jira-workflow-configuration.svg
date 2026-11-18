@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<defs><style>
+.t{font:700 27px Arial;fill:#172033}.s{font:16px Arial;fill:#526078}.h{font:700 18px Arial;fill:#17324d}.b{font:14px Arial;fill:#334155}
+.n{fill:#f7f9fc;stroke:#486581;stroke-width:2}.a{stroke:#64748b;stroke-width:2.5;fill:none;marker-end:url(#m)}
+</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#64748b"/></marker></defs>
+<rect width="1200" height="620" fill="#fff"/>
+<text x="600" y="48" text-anchor="middle" class="t">Jira Workflow Configuration</text>
+<text x="600" y="78" text-anchor="middle" class="s">Statuses, transitions, rules and controlled completion</text>
+<rect class="n" x="65" y="150" width="175" height="100" rx="14"/><text class="h" x="152" y="185" text-anchor="middle">To Do</text><text class="b" x="152" y="213" text-anchor="middle">New / selected</text>
+<rect class="n" x="300" y="150" width="175" height="100" rx="14"/><text class="h" x="387" y="185" text-anchor="middle">In Progress</text><text class="b" x="387" y="213" text-anchor="middle">Assigned / active</text>
+<rect class="n" x="535" y="150" width="175" height="100" rx="14"/><text class="h" x="622" y="185" text-anchor="middle">In Review</text><text class="b" x="622" y="213" text-anchor="middle">PR / peer review</text>
+<rect class="n" x="770" y="150" width="175" height="100" rx="14"/><text class="h" x="857" y="185" text-anchor="middle">Testing</text><text class="b" x="857" y="213" text-anchor="middle">QA validation</text>
+<rect class="n" x="1000" y="150" width="150" height="100" rx="14"/><text class="h" x="1075" y="185" text-anchor="middle">Done</text><text class="b" x="1075" y="213" text-anchor="middle">Accepted</text>
+<path class="a" d="M240 200 H295"/><path class="a" d="M475 200 H530"/><path class="a" d="M710 200 H765"/><path class="a" d="M945 200 H995"/>
+<path class="a" d="M857 250 V310 H387 V255"/>
+<text class="b" x="620" y="300" text-anchor="middle">Failed test / rework returns to In Progress</text>
+<rect class="n" x="95" y="385" width="300" height="145" rx="14"/><text class="h" x="245" y="420" text-anchor="middle">Transition controls</text><text class="b" x="120" y="452">• Who can move the issue?</text><text class="b" x="120" y="478">• Required fields / validators</text><text class="b" x="120" y="504">• Conditions and approvals</text>
+<rect class="n" x="450" y="385" width="300" height="145" rx="14"/><text class="h" x="600" y="420" text-anchor="middle">Automation</text><text class="b" x="475" y="452">• Notify owners</text><text class="b" x="475" y="478">• Update linked issues</text><text class="b" x="475" y="504">• Record deployment evidence</text>
+<rect class="n" x="805" y="385" width="300" height="145" rx="14"/><text class="h" x="955" y="420" text-anchor="middle">Governance</text><text class="b" x="830" y="452">• Keep workflow auditable</text><text class="b" x="830" y="478">• Test changes before rollout</text><text class="b" x="830" y="504">• Avoid false Done states</text>
+</svg>
