@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#334155"/></marker>
+<style>
+.t{font:700 30px Arial;fill:#0f172a}.s{font:16px Arial;fill:#475569}.h{font:700 18px Arial;fill:#0f172a}.b{font:14px Arial;fill:#334155}.n{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.j{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.g{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.p{fill:#faf5ff;stroke:#9333ea;stroke-width:2;rx:14}.o{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:14}.a{stroke:#334155;stroke-width:2.3;fill:none;marker-end:url(#arr)}
+</style></defs>
+<rect width="1200" height="760" fill="#fff"/>
+<text x="600" y="48" text-anchor="middle" class="t">Jira Release Approval Workflow</text>
+<text x="600" y="78" text-anchor="middle" class="s">Review release evidence, assess risk and authorize production deployment</text>
+<rect x="55" y="145" width="205" height="130" class="j"/><text x="157" y="183" text-anchor="middle" class="h">Release Plan</text><text x="157" y="213" text-anchor="middle" class="b">Scope and schedule</text><text x="157" y="240" text-anchor="middle" class="b">Owners and risks</text>
+<rect x="315" y="145" width="205" height="130" class="n"/><text x="417" y="183" text-anchor="middle" class="h">Readiness Review</text><text x="417" y="213" text-anchor="middle" class="b">QA / UAT evidence</text><text x="417" y="240" text-anchor="middle" class="b">CI and security checks</text>
+<rect x="575" y="145" width="205" height="130" class="p"/><text x="677" y="183" text-anchor="middle" class="h">Risk Assessment</text><text x="677" y="213" text-anchor="middle" class="b">Impact and mitigation</text><text x="677" y="240" text-anchor="middle" class="b">Rollback readiness</text>
+<rect x="835" y="145" width="145" height="130" class="o"/><text x="907" y="183" text-anchor="middle" class="h">Approval</text><text x="907" y="213" text-anchor="middle" class="b">Authorized</text><text x="907" y="240" text-anchor="middle" class="b">decision</text>
+<rect x="1030" y="145" width="125" height="130" class="g"/><text x="1092" y="183" text-anchor="middle" class="h">Deploy</text><text x="1092" y="213" text-anchor="middle" class="b">Window</text><text x="1092" y="240" text-anchor="middle" class="b">confirmed</text>
+<path d="M260 210 H305 M520 210 H565 M780 210 H825 M980 210 H1020" class="a"/>
+<rect x="170" y="385" width="860" height="140" class="n"/>
+<text x="600" y="425" text-anchor="middle" class="h">Approval Record in Jira / Change Record</text>
+<text x="600" y="460" text-anchor="middle" class="b">Decision • approver • timestamp • release scope • deployment window</text>
+<text x="600" y="490" text-anchor="middle" class="b">Evidence links • conditions • exceptions • rollback owner</text>
+<path d="M907 275 V345 H600 V375" class="a"/>
+<rect x="250" y="590" width="700" height="95" class="j"/>
+<text x="600" y="628" text-anchor="middle" class="h">Approved / Rejected / Deferred</text>
+<text x="600" y="657" text-anchor="middle" class="b">Only an approved release proceeds to the authorized deployment window</text>
+<path d="M600 525 V580" class="a"/>
+<text x="600" y="725" text-anchor="middle" class="s">Illustrative governance flow — approval roles and gates follow organizational policy.</text>
+</svg>
