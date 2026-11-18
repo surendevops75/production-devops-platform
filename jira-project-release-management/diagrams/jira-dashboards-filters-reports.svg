@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<defs><style>
+.t{font:700 27px Arial;fill:#172033}.s{font:16px Arial;fill:#526078}.h{font:700 17px Arial;fill:#17324d}.b{font:14px Arial;fill:#334155}
+.n{fill:#f7f9fc;stroke:#486581;stroke-width:2}.a{stroke:#64748b;stroke-width:2.3;fill:none;marker-end:url(#m)}
+</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#64748b"/></marker></defs>
+<rect width="1200" height="620" fill="#fff"/>
+<text x="600" y="45" text-anchor="middle" class="t">Jira Dashboards, Filters and Reports</text>
+<text x="600" y="75" text-anchor="middle" class="s">Operational visibility from issue data, sprint progress and release tracking</text>
+<rect class="n" x="65" y="130" width="220" height="110" rx="14"/><text class="h" x="175" y="166" text-anchor="middle">Jira Issues</text><text class="b" x="175" y="196" text-anchor="middle">Stories • Tasks • Bugs</text><text class="b" x="175" y="218" text-anchor="middle">Components • Versions</text>
+<rect class="n" x="355" y="130" width="220" height="110" rx="14"/><text class="h" x="465" y="166" text-anchor="middle">JQL Filters</text><text class="b" x="465" y="196" text-anchor="middle">Open work • Blockers</text><text class="b" x="465" y="218" text-anchor="middle">Service / release scope</text>
+<rect class="n" x="645" y="130" width="220" height="110" rx="14"/><text class="h" x="755" y="166" text-anchor="middle">Dashboards</text><text class="b" x="755" y="196" text-anchor="middle">Gadgets • Charts</text><text class="b" x="755" y="218" text-anchor="middle">Team / leadership views</text>
+<rect class="n" x="935" y="130" width="200" height="110" rx="14"/><text class="h" x="1035" y="166" text-anchor="middle">Reports</text><text class="b" x="1035" y="196" text-anchor="middle">Sprint • Velocity</text><text class="b" x="1035" y="218" text-anchor="middle">Release / workload</text>
+<path class="a" d="M285 185 H350"/><path class="a" d="M575 185 H640"/><path class="a" d="M865 185 H930"/>
+<rect class="n" x="100" y="325" width="285" height="150" rx="14"/><text class="h" x="242" y="360" text-anchor="middle">Engineering dashboard</text><text class="b" x="125" y="392">• Assigned and active issues</text><text class="b" x="125" y="418">• Blockers and aging work</text><text class="b" x="125" y="444">• Bugs by priority</text>
+<rect class="n" x="455" y="325" width="285" height="150" rx="14"/><text class="h" x="597" y="360" text-anchor="middle">Sprint dashboard</text><text class="b" x="480" y="392">• Sprint burndown</text><text class="b" x="480" y="418">• Sprint progress</text><text class="b" x="480" y="444">• Completed vs remaining work</text>
+<rect class="n" x="810" y="325" width="285" height="150" rx="14"/><text class="h" x="952" y="360" text-anchor="middle">Release dashboard</text><text class="b" x="835" y="392">• Version scope and status</text><text class="b" x="835" y="418">• Open release blockers</text><text class="b" x="835" y="444">• QA / approval readiness</text>
+<rect x="120" y="520" width="960" height="55" rx="12" fill="#eef4f8" stroke="#9fb3c8" stroke-width="1.5"/>
+<text class="h" x="600" y="554" text-anchor="middle">Use Jira reports for delivery tracking; use Prometheus and Grafana for runtime health and service metrics.</text>
+</svg>
