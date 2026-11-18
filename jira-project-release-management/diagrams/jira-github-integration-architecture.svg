@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#334155"/></marker>
+<style>
+.title{font:700 30px Arial;fill:#0f172a}.sub{font:16px Arial;fill:#475569}.head{font:700 19px Arial;fill:#0f172a}.body{font:15px Arial;fill:#334155}.small{font:13px Arial;fill:#475569}
+.node{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:16}.blue{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:16}.green{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:16}.purple{fill:#faf5ff;stroke:#9333ea;stroke-width:2;rx:16}.line{stroke:#334155;stroke-width:2.5;fill:none;marker-end:url(#arrow)}
+</style></defs>
+<rect width="1200" height="720" fill="#fff"/>
+<text x="600" y="52" text-anchor="middle" class="title">Jira and GitHub Integration Architecture</text>
+<text x="600" y="82" text-anchor="middle" class="sub">Trace a Jira issue through branches, commits, pull requests and CI checks</text>
+<rect x="55" y="165" width="245" height="165" class="blue"/>
+<text x="177" y="205" text-anchor="middle" class="head">Jira Software</text><text x="177" y="240" text-anchor="middle" class="body">Issue: PLAT-201</text><text x="177" y="267" text-anchor="middle" class="body">Story / acceptance criteria</text><text x="177" y="294" text-anchor="middle" class="small">Status and sprint tracking</text>
+<rect x="365" y="165" width="245" height="165" class="node"/>
+<text x="487" y="205" text-anchor="middle" class="head">GitHub Repository</text><text x="487" y="240" text-anchor="middle" class="body">feature/PLAT-201-...</text><text x="487" y="267" text-anchor="middle" class="body">Commits reference PLAT-201</text><text x="487" y="294" text-anchor="middle" class="small">Source code and history</text>
+<rect x="675" y="165" width="245" height="165" class="purple"/>
+<text x="797" y="205" text-anchor="middle" class="head">Pull Request</text><text x="797" y="240" text-anchor="middle" class="body">PR title includes PLAT-201</text><text x="797" y="267" text-anchor="middle" class="body">Review and approval</text><text x="797" y="294" text-anchor="middle" class="small">Merge to protected branch</text>
+<rect x="985" y="165" width="160" height="165" class="green"/>
+<text x="1065" y="205" text-anchor="middle" class="head">CI Pipeline</text><text x="1065" y="240" text-anchor="middle" class="body">Tests</text><text x="1065" y="267" text-anchor="middle" class="body">Build / scan</text><text x="1065" y="294" text-anchor="middle" class="small">GitHub Actions</text>
+<path d="M300 247 H355" class="line"/><path d="M610 247 H665" class="line"/><path d="M920 247 H975" class="line"/>
+<rect x="220" y="430" width="760" height="175" class="node"/>
+<text x="600" y="470" text-anchor="middle" class="head">Jira Development Panel</text><text x="600" y="508" text-anchor="middle" class="body">Linked development activity appears on the Jira issue</text><text x="600" y="540" text-anchor="middle" class="body">Branches • Commits • Pull requests • Build / deployment information*</text><text x="600" y="576" text-anchor="middle" class="small">*Visibility depends on the installed integration, permissions and connected CI/CD provider.</text>
+<path d="M487 330 V385 H600 V420" class="line"/><path d="M797 330 V385 H600" class="line"/><path d="M1065 330 V385 H980 V505" class="line"/>
+<text x="600" y="665" text-anchor="middle" class="small">Use issue keys consistently; authorize only the required organization and repositories.</text>
+</svg>
