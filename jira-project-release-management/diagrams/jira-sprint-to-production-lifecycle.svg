@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<defs><style>
+.t{font:700 27px Arial;fill:#172033}.s{font:16px Arial;fill:#526078}.h{font:700 17px Arial;fill:#17324d}.b{font:14px Arial;fill:#334155}
+.n{fill:#f7f9fc;stroke:#486581;stroke-width:2}.a{stroke:#64748b;stroke-width:2.3;fill:none;marker-end:url(#m)}
+</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#64748b"/></marker></defs>
+<rect width="1200" height="650" fill="#fff"/>
+<text x="600" y="45" text-anchor="middle" class="t">Jira Sprint-to-Production Lifecycle</text>
+<text x="600" y="75" text-anchor="middle" class="s">One feature tracked from backlog selection through production release closure</text>
+<rect class="n" x="45" y="135" width="185" height="110" rx="14"/><text class="h" x="137" y="170" text-anchor="middle">Backlog</text><text class="b" x="137" y="200" text-anchor="middle">Refine story</text><text class="b" x="137" y="222" text-anchor="middle">Set acceptance criteria</text>
+<rect class="n" x="270" y="135" width="185" height="110" rx="14"/><text class="h" x="362" y="170" text-anchor="middle">Sprint</text><text class="b" x="362" y="200" text-anchor="middle">Plan capacity</text><text class="b" x="362" y="222" text-anchor="middle">Commit sprint goal</text>
+<rect class="n" x="495" y="135" width="185" height="110" rx="14"/><text class="h" x="587" y="170" text-anchor="middle">Development</text><text class="b" x="587" y="200" text-anchor="middle">Branch / commit</text><text class="b" x="587" y="222" text-anchor="middle">Pull request / review</text>
+<rect class="n" x="720" y="135" width="185" height="110" rx="14"/><text class="h" x="812" y="170" text-anchor="middle">CI &amp; QA</text><text class="b" x="812" y="200" text-anchor="middle">Build / scan / test</text><text class="b" x="812" y="222" text-anchor="middle">QA / UAT evidence</text>
+<rect class="n" x="945" y="135" width="210" height="110" rx="14"/><text class="h" x="1050" y="170" text-anchor="middle">Release</text><text class="b" x="1050" y="200" text-anchor="middle">Approve / GitOps</text><text class="b" x="1050" y="222" text-anchor="middle">Argo CD / EKS</text>
+<path class="a" d="M230 190 H265"/><path class="a" d="M455 190 H490"/><path class="a" d="M680 190 H715"/><path class="a" d="M905 190 H940"/>
+<rect class="n" x="210" y="340" width="780" height="110" rx="14"/><text class="h" x="600" y="377" text-anchor="middle">Production verification and Jira closure</text><text class="b" x="600" y="408" text-anchor="middle">Smoke tests • Kubernetes health • metrics • logs • alerts • release evidence</text><text class="b" x="600" y="432" text-anchor="middle">Close completed issues • publish release notes • create follow-up work</text>
+<path class="a" d="M1050 245 V295 H990 V335"/>
+<rect x="105" y="505" width="990" height="85" rx="14" fill="#eef4f8" stroke="#9fb3c8" stroke-width="1.5"/>
+<text class="h" x="600" y="538" text-anchor="middle">Failure path</text><text class="b" x="600" y="565" text-anchor="middle">Stop promotion → investigate → fix or revert GitOps change → verify recovery → record incident and decision in Jira</text>
+</svg>
