@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+<defs><style>
+.bg{fill:#f7f9fc}.title{font:700 36px Arial;fill:#172b4d}.sub{font:18px Arial;fill:#44546f}
+.box{fill:#fff;stroke:#6b7a90;stroke-width:2;rx:15}.blue{fill:#e9f2ff;stroke:#1d6fd8}.purple{fill:#f3edff;stroke:#8270db}.green{fill:#e7f8ef;stroke:#1f845a}.orange{fill:#fff4e5;stroke:#b65c02}.red{fill:#fff0ee;stroke:#c9372c}
+.h{font:700 19px Arial;fill:#172b4d}.t{font:15px Arial;fill:#344563}.small{font:13px Arial;fill:#44546f}
+.arrow{stroke:#44546f;stroke-width:3;fill:none;marker-end:url(#a)}
+</style><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#44546f"/></marker></defs>
+<rect class="bg" width="1800" height="1120"/>
+<text x="65" y="62" class="title">Final End-to-End Jira Production Simulation</text>
+<text x="65" y="95" class="sub">One feature from business request to production release, validation, incident learning and delivery analytics</text>
+
+<rect x="65" y="145" width="300" height="125" class="box blue"/>
+<text x="90" y="183" class="h">1. Product backlog</text><text x="90" y="215" class="t">Epic • Story • Acceptance criteria</text><text x="90" y="242" class="t">Service component • Priority</text>
+<rect x="425" y="145" width="300" height="125" class="box blue"/>
+<text x="450" y="183" class="h">2. Sprint planning</text><text x="450" y="215" class="t">Estimate • Dependencies</text><text x="450" y="242" class="t">Capacity • Sprint commitment</text>
+<rect x="785" y="145" width="300" height="125" class="box purple"/>
+<text x="810" y="183" class="h">3. Development</text><text x="810" y="215" class="t">Branch • Code • Unit tests</text><text x="810" y="242" class="t">Pull request • Review</text>
+<rect x="1145" y="145" width="300" height="125" class="box orange"/>
+<text x="1170" y="183" class="h">4. CI and security</text><text x="1170" y="215" class="t">Jenkins / Actions / GitLab</text><text x="1170" y="242" class="t">SonarQube • Trivy • Veracode</text>
+<rect x="1505" y="145" width="230" height="125" class="box green"/>
+<text x="1530" y="183" class="h">5. QA / UAT</text><text x="1530" y="215" class="t">Functional tests</text><text x="1530" y="242" class="t">Acceptance sign-off</text>
+<path class="arrow" d="M365 207 H420"/><path class="arrow" d="M725 207 H780"/><path class="arrow" d="M1085 207 H1140"/><path class="arrow" d="M1445 207 H1500"/>
+
+<rect x="1505" y="375" width="230" height="140" class="box purple"/>
+<text x="1530" y="415" class="h">6. Release planning</text><text x="1530" y="447" class="t">Version • Release notes</text><text x="1530" y="474" class="t">Dependencies • Risk review</text>
+<rect x="1145" y="375" width="300" height="140" class="box orange"/>
+<text x="1170" y="415" class="h">7. Approval and change</text><text x="1170" y="447" class="t">Required approvals</text><text x="1170" y="474" class="t">Change record • Go / no-go</text>
+<rect x="785" y="375" width="300" height="140" class="box blue"/>
+<text x="810" y="415" class="h">8. GitOps deployment</text><text x="810" y="447" class="t">Image in ECR • Git change</text><text x="810" y="474" class="t">Argo CD reconciles EKS</text>
+<rect x="425" y="375" width="300" height="140" class="box green"/>
+<text x="450" y="415" class="h">9. Production validation</text><text x="450" y="447" class="t">Readiness • Smoke tests</text><text x="450" y="474" class="t">Metrics • Logs • User flow</text>
+<rect x="65" y="375" width="300" height="140" class="box red"/>
+<text x="90" y="415" class="h">10. Incident / rollback</text><text x="90" y="447" class="t">JSM incident if failure</text><text x="90" y="474" class="t">Mitigate • Validate recovery</text>
+<path class="arrow" d="M1618 270 V370"/><path class="arrow" d="M1505 445 H1450"/><path class="arrow" d="M1145 445 H1090"/><path class="arrow" d="M785 445 H730"/><path class="arrow" d="M425 445 H370"/>
+
+<rect x="65" y="630" width="500" height="165" class="box purple"/>
+<text x="90" y="672" class="h">11. Incident review and improvement</text><text x="90" y="707" class="t">Timeline • RCA • Problem record</text><text x="90" y="737" class="t">Corrective actions • Owners • Due dates</text><text x="90" y="767" class="t">Runbooks • Tests • Alert improvements</text>
+<rect x="650" y="630" width="500" height="165" class="box blue"/>
+<text x="675" y="672" class="h">12. Jira delivery analytics</text><text x="675" y="707" class="t">Sprint completion • Cycle time • Throughput</text><text x="675" y="737" class="t">Defect trends • Release performance</text><text x="675" y="767" class="t">MTTA / MTTR • Corrective action status</text>
+<rect x="1235" y="630" width="500" height="165" class="box green"/>
+<text x="1260" y="672" class="h">13. Runtime observability</text><text x="1260" y="707" class="t">Prometheus • Grafana • Alertmanager</text><text x="1260" y="737" class="t">ELK • Kubernetes events • Argo CD health</text><text x="1260" y="767" class="t">Availability • Latency • Errors • Logs</text>
+<path class="arrow" d="M215 515 V625"/><path class="arrow" d="M565 712 H645"/><path class="arrow" d="M1150 712 H1230"/>
+
+<rect x="65" y="865" width="1670" height="165" class="box"/>
+<text x="95" y="910" class="h">Cross-cutting controls across the complete lifecycle</text>
+<text x="95" y="950" class="t">Jira issue keys and traceability • Role-based permissions • Audit history • Secure secrets • Change governance</text>
+<text x="95" y="982" class="t">Service ownership • Release evidence • Stakeholder communication • Runbooks • Continuous improvement</text>
+</svg>
