@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#334155"/></marker>
+<style>
+.t{font:700 30px Arial;fill:#0f172a}.s{font:16px Arial;fill:#475569}.h{font:700 18px Arial;fill:#0f172a}.b{font:14px Arial;fill:#334155}.n{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.j{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.g{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.p{fill:#faf5ff;stroke:#9333ea;stroke-width:2;rx:14}.o{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:14}.a{stroke:#334155;stroke-width:2.3;fill:none;marker-end:url(#arr)}
+</style></defs>
+<rect width="1200" height="760" fill="#fff"/>
+<text x="600" y="48" text-anchor="middle" class="t">Release Validation and Rollback Workflow</text>
+<text x="600" y="78" text-anchor="middle" class="s">Verify production outcomes and recover safely when release criteria fail</text>
+<rect x="55" y="145" width="205" height="130" class="j"/><text x="157" y="183" text-anchor="middle" class="h">Deployment</text><text x="157" y="213" text-anchor="middle" class="b">Approved version</text><text x="157" y="240" text-anchor="middle" class="b">EKS / Argo CD</text>
+<rect x="315" y="145" width="205" height="130" class="n"/><text x="417" y="183" text-anchor="middle" class="h">Validation</text><text x="417" y="213" text-anchor="middle" class="b">Health and smoke tests</text><text x="417" y="240" text-anchor="middle" class="b">Metrics and logs</text>
+<rect x="575" y="145" width="205" height="130" class="p"/><text x="677" y="183" text-anchor="middle" class="h">Decision</text><text x="677" y="213" text-anchor="middle" class="b">Meets release criteria?</text><text x="677" y="240" text-anchor="middle" class="b">Assess impact</text>
+<rect x="835" y="145" width="145" height="130" class="g"/><text x="907" y="183" text-anchor="middle" class="h">Success</text><text x="907" y="213" text-anchor="middle" class="b">Accept</text><text x="907" y="240" text-anchor="middle" class="b">Monitor</text>
+<rect x="1030" y="145" width="125" height="130" class="o"/><text x="1092" y="183" text-anchor="middle" class="h">Failure</text><text x="1092" y="213" text-anchor="middle" class="b">Incident</text><text x="1092" y="240" text-anchor="middle" class="b">Rollback</text>
+<path d="M260 210 H305 M520 210 H565 M780 210 H825 M780 235 H1020" class="a"/>
+<rect x="150" y="385" width="900" height="140" class="n"/>
+<text x="600" y="425" text-anchor="middle" class="h">Rollback and Recovery Controls</text>
+<text x="600" y="460" text-anchor="middle" class="b">Revert GitOps desired state • restore compatible application version • verify rollout</text>
+<text x="600" y="490" text-anchor="middle" class="b">Check data compatibility • validate dependencies • communicate status and evidence</text>
+<path d="M1092 275 V345 H600 V375" class="a"/>
+<rect x="250" y="590" width="700" height="95" class="j"/>
+<text x="600" y="628" text-anchor="middle" class="h">Update Jira Release and Incident Records</text>
+<text x="600" y="657" text-anchor="middle" class="b">Record outcome, impact, timeline, recovery actions and follow-up work</text>
+<path d="M600 525 V580" class="a"/>
+<text x="600" y="725" text-anchor="middle" class="s">Illustrative flow — rollback must follow tested, service-specific runbooks.</text>
+</svg>
