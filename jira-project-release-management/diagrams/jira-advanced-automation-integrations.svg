@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<defs><style>
+.t{font:700 27px Arial;fill:#172033}.s{font:16px Arial;fill:#526078}.h{font:700 18px Arial;fill:#17324d}.b{font:14px Arial;fill:#334155}
+.n{fill:#f7f9fc;stroke:#486581;stroke-width:2}.a{stroke:#64748b;stroke-width:2.3;fill:none;marker-end:url(#m)}
+</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#64748b"/></marker></defs>
+<rect width="1200" height="620" fill="#fff"/>
+<text x="600" y="45" text-anchor="middle" class="t">Jira Advanced Automation and Integrations</text>
+<text x="600" y="75" text-anchor="middle" class="s">Connect work tracking to source control, CI/CD, release evidence and operational response</text>
+<rect class="n" x="55" y="135" width="220" height="120" rx="14"/><text class="h" x="165" y="171" text-anchor="middle">Jira</text><text class="b" x="80" y="204">Issues • Releases</text><text class="b" x="80" y="229">Workflow • Automation</text>
+<rect class="n" x="345" y="135" width="220" height="120" rx="14"/><text class="h" x="455" y="171" text-anchor="middle">GitHub</text><text class="b" x="370" y="204">Branches • Commits</text><text class="b" x="370" y="229">Pull requests • Reviews</text>
+<rect class="n" x="635" y="135" width="220" height="120" rx="14"/><text class="h" x="745" y="171" text-anchor="middle">CI/CD</text><text class="b" x="660" y="204">Jenkins / Actions / GitLab</text><text class="b" x="660" y="229">Build • Test • Scan</text>
+<rect class="n" x="925" y="135" width="220" height="120" rx="14"/><text class="h" x="1035" y="171" text-anchor="middle">Delivery Systems</text><text class="b" x="950" y="204">ECR • EKS • Argo CD</text><text class="b" x="950" y="229">Monitoring • Incidents</text>
+<path class="a" d="M275 195 H340"/><path class="a" d="M565 195 H630"/><path class="a" d="M855 195 H920"/>
+<rect class="n" x="120" y="345" width="285" height="135" rx="14"/><text class="h" x="262" y="382" text-anchor="middle">Event-driven automation</text><text class="b" x="145" y="414">Issue / PR / pipeline event</text><text class="b" x="145" y="441">Validated trigger and condition</text>
+<rect class="n" x="455" y="345" width="285" height="135" rx="14"/><text class="h" x="597" y="382" text-anchor="middle">Evidence and traceability</text><text class="b" x="480" y="414">Issue key • commit • build URL</text><text class="b" x="480" y="441">test result • image digest • release</text>
+<rect class="n" x="790" y="345" width="285" height="135" rx="14"/><text class="h" x="932" y="382" text-anchor="middle">Governed response</text><text class="b" x="815" y="414">Notify • update • approval gate</text><text class="b" x="815" y="441">human review for risky actions</text>
+<path class="a" d="M405 412 H450"/><path class="a" d="M740 412 H785"/>
+<rect x="120" y="525" width="955" height="50" rx="12" fill="#eef4f8" stroke="#9fb3c8" stroke-width="1.5"/>
+<text class="h" x="597" y="557" text-anchor="middle">Jira records delivery context; CI/CD and deployment systems enforce technical controls.</text>
+</svg>
