@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<defs><style>
+.t{font:700 27px Arial;fill:#172033}.s{font:16px Arial;fill:#526078}.h{font:700 17px Arial;fill:#17324d}.b{font:13px Arial;fill:#334155}
+.n{fill:#f7f9fc;stroke:#486581;stroke-width:2}.a{stroke:#64748b;stroke-width:2.2;fill:none;marker-end:url(#m)}
+</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#64748b"/></marker></defs>
+<rect width="1200" height="650" fill="#fff"/>
+<text x="600" y="45" text-anchor="middle" class="t">Jira 21-Microservice Project Simulation</text>
+<text x="600" y="74" text-anchor="middle" class="s">Portfolio structure → delivery work → shared platform work → release governance</text>
+<rect class="n" x="55" y="125" width="260" height="135" rx="14"/><text class="h" x="185" y="157" text-anchor="middle">Business / Domain Epics</text><text class="b" x="78" y="188">User • Product Catalog • Cart</text><text class="b" x="78" y="211">Orders • Payment • Inventory</text><text class="b" x="78" y="234">Notification • 14 service slots*</text>
+<rect class="n" x="355" y="125" width="260" height="135" rx="14"/><text class="h" x="485" y="157" text-anchor="middle">Delivery Issues</text><text class="b" x="378" y="188">Stories and acceptance criteria</text><text class="b" x="378" y="211">Tasks and sub-tasks</text><text class="b" x="378" y="234">Bugs and test evidence</text>
+<rect class="n" x="655" y="125" width="235" height="135" rx="14"/><text class="h" x="772" y="157" text-anchor="middle">Shared Platform Epics</text><text class="b" x="678" y="188">EKS / networking / IAM</text><text class="b" x="678" y="211">CI/CD / GitOps / security</text><text class="b" x="678" y="234">Monitoring / databases</text>
+<rect class="n" x="930" y="125" width="215" height="135" rx="14"/><text class="h" x="1037" y="157" text-anchor="middle">Release Governance</text><text class="b" x="953" y="188">Version / scope</text><text class="b" x="953" y="211">QA / approval</text><text class="b" x="953" y="234">Deploy / validate / close</text>
+<path class="a" d="M315 192 H350"/><path class="a" d="M615 192 H650"/><path class="a" d="M890 192 H925"/>
+<rect class="n" x="105" y="345" width="990" height="115" rx="14"/><text class="h" x="600" y="380" text-anchor="middle">Example service delivery chain — Order capability</text><text class="b" x="600" y="411" text-anchor="middle">Order story → API / database / messaging tasks → PR and CI checks → QA tests → release version</text><text class="b" x="600" y="435" text-anchor="middle">→ production deployment through GitOps → smoke tests and monitoring → Jira closure</text>
+<rect x="105" y="500" width="990" height="85" rx="14" fill="#eef4f8" stroke="#9fb3c8" stroke-width="1.5"/>
+<text class="h" x="600" y="533" text-anchor="middle">Traceability rule</text><text class="b" x="600" y="558" text-anchor="middle">Every delivery issue links to its Epic; dependencies, PRs, builds, tests and releases are linked where supported.</text>
+<text class="b" x="600" y="620" text-anchor="middle">*Replace the 14 placeholder service slots with the actual service names from your application.</text>
+</svg>
