@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#334155"/></marker>
+<style>
+.t{font:700 30px Arial;fill:#0f172a}.s{font:16px Arial;fill:#475569}.h{font:700 18px Arial;fill:#0f172a}.b{font:14px Arial;fill:#334155}.n{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.j{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.g{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.p{fill:#faf5ff;stroke:#9333ea;stroke-width:2;rx:14}.o{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:14}.a{stroke:#334155;stroke-width:2.3;fill:none;marker-end:url(#arr)}
+</style></defs>
+<rect width="1200" height="760" fill="#fff"/>
+<text x="600" y="48" text-anchor="middle" class="t">Jira Production Deployment Workflow</text>
+<text x="600" y="78" text-anchor="middle" class="s">Execute the approved release and verify the application in production</text>
+<rect x="55" y="145" width="205" height="130" class="j"/><text x="157" y="183" text-anchor="middle" class="h">Jira Approval</text><text x="157" y="213" text-anchor="middle" class="b">Approved release</text><text x="157" y="240" text-anchor="middle" class="b">Scope and window</text>
+<rect x="315" y="145" width="205" height="130" class="n"/><text x="417" y="183" text-anchor="middle" class="h">Pre-deploy Checks</text><text x="417" y="213" text-anchor="middle" class="b">Image digest</text><text x="417" y="240" text-anchor="middle" class="b">Config and capacity</text>
+<rect x="575" y="145" width="205" height="130" class="p"/><text x="677" y="183" text-anchor="middle" class="h">GitOps Change</text><text x="677" y="213" text-anchor="middle" class="b">Helm values update</text><text x="677" y="240" text-anchor="middle" class="b">Reviewed Git commit</text>
+<rect x="835" y="145" width="145" height="130" class="g"/><text x="907" y="183" text-anchor="middle" class="h">Argo CD</text><text x="907" y="213" text-anchor="middle" class="b">Sync</text><text x="907" y="240" text-anchor="middle" class="b">Health</text>
+<rect x="1030" y="145" width="125" height="130" class="o"/><text x="1092" y="183" text-anchor="middle" class="h">EKS</text><text x="1092" y="213" text-anchor="middle" class="b">Pods</text><text x="1092" y="240" text-anchor="middle" class="b">Services</text>
+<path d="M260 210 H305 M520 210 H565 M780 210 H825 M980 210 H1020" class="a"/>
+<rect x="150" y="385" width="900" height="140" class="n"/>
+<text x="600" y="425" text-anchor="middle" class="h">Production Validation</text>
+<text x="600" y="460" text-anchor="middle" class="b">Rollout status • pod readiness • service endpoints • application health</text>
+<text x="600" y="490" text-anchor="middle" class="b">Smoke tests • metrics and logs • business transaction checks</text>
+<path d="M1092 275 V345 H600 V375" class="a"/>
+<rect x="250" y="590" width="700" height="95" class="j"/>
+<text x="600" y="628" text-anchor="middle" class="h">Update Jira Deployment Record</text>
+<text x="600" y="657" text-anchor="middle" class="b">Record revision, image digest, outcome, evidence and any incident</text>
+<path d="M600 525 V580" class="a"/>
+<text x="600" y="725" text-anchor="middle" class="s">Illustrative GitOps deployment — follow the approved production runbook.</text>
+</svg>
