@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+<defs>
+  <style>
+    .bg{fill:#f7f9fc}.title{font:700 34px Arial;fill:#172b4d}.sub{font:18px Arial;fill:#44546f}
+    .box{fill:#fff;stroke:#6b7a90;stroke-width:2;rx:16}.blue{fill:#e9f2ff;stroke:#1d6fd8}
+    .red{fill:#fff0ee;stroke:#c9372c}.green{fill:#e7f8ef;stroke:#1f845a}.purple{fill:#f3edff;stroke:#8270db}
+    .h{font:700 20px Arial;fill:#172b4d}.t{font:16px Arial;fill:#344563}.small{font:14px Arial;fill:#44546f}
+    .arrow{stroke:#44546f;stroke-width:3;fill:none;marker-end:url(#a)}
+    .dash{stroke-dasharray:8 7}
+  </style>
+  <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#44546f"/></marker>
+</defs>
+<rect class="bg" width="1600" height="980"/>
+<text x="70" y="65" class="title">Jira Service Management — Production Incident Lifecycle</text>
+<text x="70" y="98" class="sub">From alert or customer report to service restoration, post-incident review and prevention</text>
+
+<rect x="70" y="145" width="300" height="125" class="box blue"/>
+<text x="95" y="183" class="h">1. Incident detected</text>
+<text x="95" y="215" class="t">Alertmanager / Grafana</text>
+<text x="95" y="240" class="t">ELK / customer / support team</text>
+
+<rect x="440" y="145" width="300" height="125" class="box blue"/>
+<text x="465" y="183" class="h">2. JSM incident created</text>
+<text x="465" y="215" class="t">Service, environment, impact</text>
+<text x="465" y="240" class="t">Evidence, timestamp, alert link</text>
+
+<rect x="810" y="145" width="300" height="125" class="box red"/>
+<text x="835" y="183" class="h">3. Triage and priority</text>
+<text x="835" y="215" class="t">Severity / business impact</text>
+<text x="835" y="240" class="t">P1–P4, owner, escalation</text>
+
+<rect x="1180" y="145" width="350" height="125" class="box purple"/>
+<text x="1205" y="183" class="h">4. Incident response</text>
+<text x="1205" y="215" class="t">Incident commander + responders</text>
+<text x="1205" y="240" class="t">Communicate status and updates</text>
+
+<path class="arrow" d="M370 207 H435"/><path class="arrow" d="M740 207 H805"/><path class="arrow" d="M1110 207 H1175"/>
+
+<rect x="1180" y="365" width="350" height="150" class="box"/>
+<text x="1205" y="405" class="h">5. Investigate</text>
+<text x="1205" y="438" class="t">Kubernetes events and pod logs</text>
+<text x="1205" y="465" class="t">Prometheus metrics / Grafana</text>
+<text x="1205" y="492" class="t">ELK logs / recent deployment diff</text>
+
+<rect x="810" y="365" width="300" height="150" class="box green"/>
+<text x="835" y="405" class="h">6. Mitigate / restore</text>
+<text x="835" y="438" class="t">Rollback via GitOps commit</text>
+<text x="835" y="465" class="t">Scale / fail over / config fix</text>
+<text x="835" y="492" class="t">Validate customer-facing service</text>
+
+<rect x="440" y="365" width="300" height="150" class="box blue"/>
+<text x="465" y="405" class="h">7. Resolve incident</text>
+<text x="465" y="438" class="t">Confirm recovery and SLO health</text>
+<text x="465" y="465" class="t">Record timeline and resolution</text>
+<text x="465" y="492" class="t">Notify stakeholders / requester</text>
+
+<path class="arrow" d="M1355 270 V360"/><path class="arrow" d="M1180 440 H1115"/><path class="arrow" d="M810 440 H745"/>
+
+<rect x="440" y="630" width="300" height="145" class="box purple"/>
+<text x="465" y="670" class="h">8. Post-incident review</text>
+<text x="465" y="703" class="t">Blameless RCA and timeline</text>
+<text x="465" y="730" class="t">Contributing factors and impact</text>
+<text x="465" y="757" class="t">Customer / business communication</text>
+
+<rect x="810" y="630" width="300" height="145" class="box green"/>
+<text x="835" y="670" class="h">9. Corrective actions</text>
+<text x="835" y="703" class="t">Create Jira problem / change items</text>
+<text x="835" y="730" class="t">Tests, alerts, runbooks, safeguards</text>
+<text x="835" y="757" class="t">Owners, due dates, verification</text>
+
+<rect x="1180" y="630" width="350" height="145" class="box blue"/>
+<text x="1205" y="670" class="h">10. Trend and improve</text>
+<text x="1205" y="703" class="t">MTTA / MTTR / incident recurrence</text>
+<text x="1205" y="730" class="t">Service reliability and backlog trends</text>
+<text x="1205" y="757" class="t">Review actions to completion</text>
+
+<path class="arrow" d="M590 515 V625"/><path class="arrow" d="M740 702 H805"/><path class="arrow" d="M1110 702 H1175"/>
+
+<rect x="70" y="835" width="1460" height="90" class="box"/>
+<text x="95" y="872" class="h">Operational controls throughout the lifecycle</text>
+<text x="95" y="902" class="t">Role-based access • on-call escalation • audit trail • incident communications • evidence retention • change control • runbook links</text>
+</svg>
