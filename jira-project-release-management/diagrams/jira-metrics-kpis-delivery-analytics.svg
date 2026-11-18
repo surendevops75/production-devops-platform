@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+<defs>
+<style>
+.bg{fill:#f7f9fc}.title{font:700 34px Arial;fill:#172b4d}.sub{font:18px Arial;fill:#44546f}
+.box{fill:#fff;stroke:#6b7a90;stroke-width:2;rx:16}.blue{fill:#e9f2ff;stroke:#1d6fd8}.green{fill:#e7f8ef;stroke:#1f845a}.purple{fill:#f3edff;stroke:#8270db}.orange{fill:#fff4e5;stroke:#b65c02}
+.h{font:700 21px Arial;fill:#172b4d}.t{font:16px Arial;fill:#344563}.small{font:14px Arial;fill:#44546f}
+.arrow{stroke:#44546f;stroke-width:3;fill:none;marker-end:url(#a)}
+</style>
+<marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#44546f"/></marker>
+</defs>
+<rect class="bg" width="1600" height="980"/>
+<text x="70" y="65" class="title">Jira Metrics, KPIs and Delivery Analytics</text>
+<text x="70" y="98" class="sub">Collect workflow data, calculate meaningful indicators, review trends and improve delivery</text>
+
+<rect x="70" y="150" width="330" height="150" class="box blue"/>
+<text x="95" y="190" class="h">1. Jira delivery data</text>
+<text x="95" y="225" class="t">Backlog • Sprint • Issues</text>
+<text x="95" y="252" class="t">Bugs • Releases • Incidents</text>
+<text x="95" y="279" class="t">Status history • Estimates</text>
+
+<rect x="475" y="150" width="330" height="150" class="box purple"/>
+<text x="500" y="190" class="h">2. Data preparation</text>
+<text x="500" y="225" class="t">Saved JQL filters</text>
+<text x="500" y="252" class="t">Consistent definitions</text>
+<text x="500" y="279" class="t">Time windows and segments</text>
+
+<rect x="880" y="150" width="300" height="150" class="box orange"/>
+<text x="905" y="190" class="h">3. KPI calculation</text>
+<text x="905" y="225" class="t">Velocity • Cycle time</text>
+<text x="905" y="252" class="t">Lead time • Defect trends</text>
+<text x="905" y="279" class="t">Release and incident metrics</text>
+
+<rect x="1255" y="150" width="275" height="150" class="box green"/>
+<text x="1280" y="190" class="h">4. Reporting</text>
+<text x="1280" y="225" class="t">Jira dashboards</text>
+<text x="1280" y="252" class="t">Sprint / release reports</text>
+<text x="1280" y="279" class="t">Management reviews</text>
+
+<path class="arrow" d="M400 225 H470"/><path class="arrow" d="M805 225 H875"/><path class="arrow" d="M1180 225 H1250"/>
+
+<rect x="70" y="400" width="440" height="205" class="box"/>
+<text x="95" y="440" class="h">Delivery flow metrics</text>
+<text x="95" y="478" class="t">• Lead time and cycle time</text>
+<text x="95" y="510" class="t">• Throughput and work in progress</text>
+<text x="95" y="542" class="t">• Sprint completion and carryover</text>
+<text x="95" y="574" class="t">• Blocked work and aging items</text>
+
+<rect x="580" y="400" width="440" height="205" class="box"/>
+<text x="605" y="440" class="h">Quality and release metrics</text>
+<text x="605" y="478" class="t">• Defect trends and escaped defects</text>
+<text x="605" y="510" class="t">• Reopen rate and bug aging</text>
+<text x="605" y="542" class="t">• Deployment frequency</text>
+<text x="605" y="574" class="t">• Change failure and rollback trends</text>
+
+<rect x="1090" y="400" width="440" height="205" class="box"/>
+<text x="1115" y="440" class="h">Service metrics</text>
+<text x="1115" y="478" class="t">• Incident volume and priority mix</text>
+<text x="1115" y="510" class="t">• MTTA and MTTR</text>
+<text x="1115" y="542" class="t">• SLA performance</text>
+<text x="1115" y="574" class="t">• Recurrence and action completion</text>
+
+<rect x="70" y="700" width="680" height="155" class="box blue"/>
+<text x="95" y="742" class="h">Jira analytics layer</text>
+<text x="95" y="778" class="t">Saved filters • Dashboards • Sprint reports • Release reports</text>
+<text x="95" y="812" class="t">Workflow history • Issue data • Project-level trends</text>
+
+<rect x="850" y="700" width="680" height="155" class="box green"/>
+<text x="875" y="742" class="h">Runtime observability layer</text>
+<text x="875" y="778" class="t">Prometheus • Grafana • Alertmanager • ELK</text>
+<text x="875" y="812" class="t">Latency • Errors • Availability • CPU / memory • Logs</text>
+
+<path class="arrow" d="M290 605 V695"/><path class="arrow" d="M800 300 V350 H800 V395"/><path class="arrow" d="M1300 605 V695"/>
+
+<rect x="300" y="895" width="1000" height="55" class="box purple"/>
+<text x="330" y="930" class="h">Review trends → identify bottlenecks → agree actions → measure improvement</text>
+</svg>
