@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+<defs>
+<style>
+.bg{fill:#f7f9fc}.title{font:700 36px Arial;fill:#172b4d}.sub{font:18px Arial;fill:#44546f}
+.box{fill:#fff;stroke:#6b7a90;stroke-width:2;rx:16}.blue{fill:#e9f2ff;stroke:#1d6fd8}.purple{fill:#f3edff;stroke:#8270db}.green{fill:#e7f8ef;stroke:#1f845a}.orange{fill:#fff4e5;stroke:#b65c02}.red{fill:#fff0ee;stroke:#c9372c}
+.h{font:700 20px Arial;fill:#172b4d}.t{font:16px Arial;fill:#344563}.small{font:14px Arial;fill:#44546f}
+.arrow{stroke:#44546f;stroke-width:3;fill:none;marker-end:url(#a)}
+</style>
+<marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#44546f"/></marker>
+</defs>
+<rect class="bg" width="1800" height="1120"/>
+<text x="65" y="65" class="title">SRE Fundamentals &amp; SLO Architecture</text>
+<text x="65" y="98" class="sub">Define user journeys, measure reliability, manage error budgets and drive engineering decisions</text>
+
+<rect x="65" y="155" width="310" height="150" class="box blue"/>
+<text x="90" y="195" class="h">1. User experience</text>
+<text x="90" y="230" class="t">Checkout • Login • Product search</text>
+<text x="90" y="258" class="t">Customer-visible success criteria</text>
+<text x="90" y="284" class="t">Availability and latency objectives</text>
+
+<rect x="445" y="155" width="310" height="150" class="box purple"/>
+<text x="470" y="195" class="h">2. SLIs</text>
+<text x="470" y="230" class="t">Successful request ratio</text>
+<text x="470" y="258" class="t">Latency distribution</text>
+<text x="470" y="284" class="t">Correctness / freshness / durability</text>
+
+<rect x="825" y="155" width="310" height="150" class="box orange"/>
+<text x="850" y="195" class="h">3. SLOs</text>
+<text x="850" y="230" class="t">Target over a defined window</text>
+<text x="850" y="258" class="t">Example: 99.9% successful requests</text>
+<text x="850" y="284" class="t">Clear scope and measurement rules</text>
+
+<rect x="1205" y="155" width="530" height="150" class="box green"/>
+<text x="1230" y="195" class="h">4. Error budget</text>
+<text x="1230" y="230" class="t">Allowed unreliability = 1 − SLO</text>
+<text x="1230" y="258" class="t">Track consumption over the same window</text>
+<text x="1230" y="284" class="t">Use policy to guide release risk decisions</text>
+<path class="arrow" d="M375 230 H440"/><path class="arrow" d="M755 230 H820"/><path class="arrow" d="M1135 230 H1200"/>
+
+<rect x="65" y="400" width="480" height="195" class="box"/>
+<text x="90" y="442" class="h">Measurement and telemetry</text>
+<text x="90" y="480" class="t">Application metrics and request outcomes</text>
+<text x="90" y="512" class="t">Prometheus scraping and recording rules</text>
+<text x="90" y="544" class="t">Grafana SLO dashboards</text>
+<text x="90" y="576" class="t">Alertmanager routes actionable alerts</text>
+
+<rect x="660" y="400" width="480" height="195" class="box blue"/>
+<text x="685" y="442" class="h">Reliability operations</text>
+<text x="685" y="480" class="t">SLI / SLO review and error-budget policy</text>
+<text x="685" y="512" class="t">Incident response and postmortems</text>
+<text x="685" y="544" class="t">Release risk and change management</text>
+<text x="685" y="576" class="t">Capacity, resilience and dependency work</text>
+
+<rect x="1255" y="400" width="480" height="195" class="box purple"/>
+<text x="1280" y="442" class="h">Engineering execution</text>
+<text x="1280" y="480" class="t">GitHub and pull-request workflow</text>
+<text x="1280" y="512" class="t">Jenkins / GitHub Actions / GitLab CI</text>
+<text x="1280" y="544" class="t">Helm and GitOps repository</text>
+<text x="1280" y="576" class="t">Argo CD deploys to AWS EKS</text>
+<path class="arrow" d="M900 305 V360 H305 V395"/><path class="arrow" d="M545 497 H655"/><path class="arrow" d="M1140 497 H1250"/>
+
+<rect x="65" y="700" width="480" height="170" class="box green"/>
+<text x="90" y="742" class="h">Healthy reliability loop</text>
+<text x="90" y="780" class="t">Meet SLO and preserve budget</text>
+<text x="90" y="812" class="t">Continue measured delivery</text>
+<text x="90" y="844" class="t">Invest in prevention and automation</text>
+
+<rect x="660" y="700" width="480" height="170" class="box red"/>
+<text x="685" y="742" class="h">Budget burn / SLO risk</text>
+<text x="685" y="780" class="t">Investigate fast and slow burn alerts</text>
+<text x="685" y="812" class="t">Mitigate incidents and reduce risk</text>
+<text x="685" y="844" class="t">Apply release policy and recovery plan</text>
+
+<rect x="1255" y="700" width="480" height="170" class="box orange"/>
+<text x="1280" y="742" class="h">Learning and improvement</text>
+<text x="1280" y="780" class="t">Blameless postmortems</text>
+<text x="1280" y="812" class="t">Prioritized reliability backlog</text>
+<text x="1280" y="844" class="t">Review SLI and SLO suitability</text>
+<path class="arrow" d="M900 595 V650 H305 V695"/><path class="arrow" d="M545 785 H655"/><path class="arrow" d="M1140 785 H1250"/>
+<path class="arrow" d="M1495 700 V640 H1510 V310"/>
+
+<rect x="65" y="930" width="1670" height="110" class="box"/>
+<text x="95" y="973" class="h">Core SRE principles</text>
+<text x="95" y="1008" class="t">User-centric reliability • measurable objectives • shared ownership • automation • controlled toil • blameless learning • continuous improvement</text>
+</svg>
