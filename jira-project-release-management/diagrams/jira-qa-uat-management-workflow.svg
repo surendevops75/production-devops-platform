@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+<defs><marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#334155"/></marker>
+<style>
+.t{font:700 30px Arial;fill:#0f172a}.s{font:16px Arial;fill:#475569}.h{font:700 18px Arial;fill:#0f172a}.b{font:14px Arial;fill:#334155}.n{fill:#f8fafc;stroke:#64748b;stroke-width:2;rx:14}.j{fill:#eff6ff;stroke:#2563eb;stroke-width:2;rx:14}.q{fill:#f0fdf4;stroke:#16a34a;stroke-width:2;rx:14}.u{fill:#faf5ff;stroke:#9333ea;stroke-width:2;rx:14}.w{fill:#fff7ed;stroke:#ea580c;stroke-width:2;rx:14}.a{stroke:#334155;stroke-width:2.3;fill:none;marker-end:url(#arr)}
+</style></defs>
+<rect width="1200" height="760" fill="#fff"/>
+<text x="600" y="48" text-anchor="middle" class="t">Jira QA and UAT Management Workflow</text>
+<text x="600" y="78" text-anchor="middle" class="s">Plan tests, record defects, obtain acceptance and establish release readiness</text>
+<rect x="55" y="150" width="205" height="125" class="j"/><text x="157" y="187" text-anchor="middle" class="h">Jira Story</text><text x="157" y="216" text-anchor="middle" class="b">PLAT-401</text><text x="157" y="242" text-anchor="middle" class="b">Acceptance criteria</text>
+<rect x="315" y="150" width="205" height="125" class="q"/><text x="417" y="187" text-anchor="middle" class="h">Test Planning</text><text x="417" y="216" text-anchor="middle" class="b">Test cases</text><text x="417" y="242" text-anchor="middle" class="b">Expected results</text>
+<rect x="575" y="150" width="205" height="125" class="n"/><text x="677" y="187" text-anchor="middle" class="h">QA Execution</text><text x="677" y="216" text-anchor="middle" class="b">Pass / Fail / Blocked</text><text x="677" y="242" text-anchor="middle" class="b">Evidence recorded</text>
+<rect x="835" y="150" width="145" height="125" class="w"/><text x="907" y="187" text-anchor="middle" class="h">Defect</text><text x="907" y="216" text-anchor="middle" class="b">Bug issue</text><text x="907" y="242" text-anchor="middle" class="b">Retest</text>
+<rect x="1030" y="150" width="125" height="125" class="u"/><text x="1092" y="187" text-anchor="middle" class="h">UAT</text><text x="1092" y="216" text-anchor="middle" class="b">Business</text><text x="1092" y="242" text-anchor="middle" class="b">sign-off</text>
+<path d="M260 212 H305 M520 212 H565 M780 212 H825 M980 212 H1020" class="a"/>
+<rect x="180" y="380" width="840" height="145" class="n"/>
+<text x="600" y="420" text-anchor="middle" class="h">Release Readiness Review</text>
+<text x="600" y="455" text-anchor="middle" class="b">Acceptance criteria met • Required tests passed • Critical defects resolved or formally accepted</text>
+<text x="600" y="485" text-anchor="middle" class="b">QA evidence retained • UAT decision recorded • Release owner approval obtained</text>
+<path d="M677 275 V345 H600 V370" class="a"/><path d="M907 275 V345 H600" class="a"/><path d="M1092 275 V345 H600" class="a"/>
+<rect x="250" y="590" width="700" height="95" class="j"/>
+<text x="600" y="628" text-anchor="middle" class="h">Ready for Release Planning</text>
+<text x="600" y="657" text-anchor="middle" class="b">Record outcome and evidence in Jira; unresolved risks need explicit ownership</text>
+<path d="M600 525 V580" class="a"/>
+<text x="600" y="725" text-anchor="middle" class="s">Illustrative workflow — use the team's approved test management and sign-off process.</text>
+</svg>
