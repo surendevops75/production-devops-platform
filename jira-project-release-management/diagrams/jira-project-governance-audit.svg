@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="610" viewBox="0 0 1200 610">
+<defs><style>
+.t{font:700 27px Arial;fill:#172033}.s{font:16px Arial;fill:#526078}.h{font:700 18px Arial;fill:#17324d}.b{font:14px Arial;fill:#334155}
+.n{fill:#f7f9fc;stroke:#486581;stroke-width:2}.a{stroke:#64748b;stroke-width:2.3;fill:none;marker-end:url(#m)}
+</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#64748b"/></marker></defs>
+<rect width="1200" height="610" fill="#fff"/>
+<text x="600" y="45" text-anchor="middle" class="t">Jira Project Governance and Audit Management</text>
+<text x="600" y="75" text-anchor="middle" class="s">Identity → permissions → controlled changes → evidence → periodic review</text>
+<rect class="n" x="55" y="135" width="235" height="120" rx="14"/><text class="h" x="172" y="171" text-anchor="middle">Identity &amp; Roles</text><text class="b" x="80" y="204">Users • Groups • Project roles</text><text class="b" x="80" y="229">Least privilege</text>
+<rect class="n" x="345" y="135" width="235" height="120" rx="14"/><text class="h" x="462" y="171" text-anchor="middle">Permission Scheme</text><text class="b" x="370" y="204">Browse • Create • Edit</text><text class="b" x="370" y="229">Transition • Administer</text>
+<rect class="n" x="635" y="135" width="235" height="120" rx="14"/><text class="h" x="752" y="171" text-anchor="middle">Workflow Controls</text><text class="b" x="660" y="204">Conditions • Validators</text><text class="b" x="660" y="229">Approvals • Change review</text>
+<rect class="n" x="925" y="135" width="220" height="120" rx="14"/><text class="h" x="1035" y="171" text-anchor="middle">Audit &amp; Review</text><text class="b" x="950" y="204">History • Audit records</text><text class="b" x="950" y="229">Access review • Evidence</text>
+<path class="a" d="M290 195 H340"/><path class="a" d="M580 195 H630"/><path class="a" d="M870 195 H920"/>
+<rect class="n" x="125" y="335" width="285" height="135" rx="14"/><text class="h" x="267" y="372" text-anchor="middle">Developers &amp; QA</text><text class="b" x="150" y="405">Create and update assigned work</text><text class="b" x="150" y="432">No unnecessary admin access</text>
+<rect class="n" x="455" y="335" width="285" height="135" rx="14"/><text class="h" x="597" y="372" text-anchor="middle">Release &amp; Project Owners</text><text class="b" x="480" y="405">Approve controlled transitions</text><text class="b" x="480" y="432">Manage project configuration</text>
+<rect class="n" x="785" y="335" width="285" height="135" rx="14"/><text class="h" x="927" y="372" text-anchor="middle">Governance Evidence</text><text class="b" x="810" y="405">Permission changes • decisions</text><text class="b" x="810" y="432">Periodic review • remediation</text>
+<rect x="125" y="515" width="945" height="55" rx="12" fill="#eef4f8" stroke="#9fb3c8" stroke-width="1.5"/>
+<text class="h" x="597" y="549" text-anchor="middle">Governance principle: grant only required access, review it regularly, and retain evidence.</text>
+</svg>
