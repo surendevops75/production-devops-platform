@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560">
+<defs><style>
+.t{font:700 27px Arial;fill:#172033}.s{font:16px Arial;fill:#526078}.h{font:700 18px Arial;fill:#17324d}.b{font:14px Arial;fill:#334155}
+.n{fill:#f7f9fc;stroke:#486581;stroke-width:2}.a{stroke:#64748b;stroke-width:2.5;fill:none;marker-end:url(#m)}
+</style><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0 L0 6 L9 3z" fill="#64748b"/></marker></defs>
+<rect width="1200" height="560" fill="#fff"/>
+<text x="600" y="48" text-anchor="middle" class="t">Jira Automation Rule Lifecycle</text>
+<text x="600" y="78" text-anchor="middle" class="s">Trigger → Conditions → Actions → Audit and continuous improvement</text>
+<rect class="n" x="70" y="150" width="220" height="115" rx="14"/><text class="h" x="180" y="187" text-anchor="middle">Trigger</text><text class="b" x="180" y="217" text-anchor="middle">Issue transitioned</text><text class="b" x="180" y="240" text-anchor="middle">Scheduled / created</text>
+<rect class="n" x="350" y="150" width="220" height="115" rx="14"/><text class="h" x="460" y="187" text-anchor="middle">Conditions</text><text class="b" x="460" y="217" text-anchor="middle">Issue type / project</text><text class="b" x="460" y="240" text-anchor="middle">Status / fields / JQL</text>
+<rect class="n" x="630" y="150" width="220" height="115" rx="14"/><text class="h" x="740" y="187" text-anchor="middle">Actions</text><text class="b" x="740" y="217" text-anchor="middle">Assign / comment</text><text class="b" x="740" y="240" text-anchor="middle">Notify / transition</text>
+<rect class="n" x="910" y="150" width="220" height="115" rx="14"/><text class="h" x="1020" y="187" text-anchor="middle">Audit</text><text class="b" x="1020" y="217" text-anchor="middle">Review rule result</text><text class="b" x="1020" y="240" text-anchor="middle">Fix / tune / retest</text>
+<path class="a" d="M290 207 H345"/><path class="a" d="M570 207 H625"/><path class="a" d="M850 207 H905"/>
+<rect class="n" x="130" y="350" width="270" height="115" rx="14"/><text class="h" x="265" y="387" text-anchor="middle">Example: QA notification</text><text class="b" x="155" y="418">Trigger: moved to Testing</text><text class="b" x="155" y="441">Action: notify QA group</text>
+<rect class="n" x="465" y="350" width="270" height="115" rx="14"/><text class="h" x="600" y="387" text-anchor="middle">Example: Bug escalation</text><text class="b" x="490" y="418">Trigger: critical bug created</text><text class="b" x="490" y="441">Action: notify incident owner</text>
+<rect class="n" x="800" y="350" width="270" height="115" rx="14"/><text class="h" x="935" y="387" text-anchor="middle">Example: Release reminder</text><text class="b" x="825" y="418">Trigger: scheduled check</text><text class="b" x="825" y="441">Action: remind release owner</text>
+</svg>
