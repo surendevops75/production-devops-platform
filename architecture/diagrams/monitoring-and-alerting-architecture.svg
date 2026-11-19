@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120">
+<defs>
+  <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#334155"/></marker>
+  <style>
+    .bg{fill:#f8fafc}.title{font: bold 38px Arial;fill:#0f172a}.sub{font:20px Arial;fill:#475569}
+    .h{font:bold 23px Arial;fill:#0f172a}.t{font:18px Arial;fill:#1e293b}.small{font:16px Arial;fill:#475569}
+    .box{stroke:#334155;stroke-width:2;rx:18;ry:18}.arrow{stroke:#334155;stroke-width:3;fill:none;marker-end:url(#arrow)}
+    .dash{stroke-dasharray:9 7}
+  </style>
+</defs>
+<rect class="bg" width="1800" height="1120"/>
+<text x="900" y="62" text-anchor="middle" class="title">Production Monitoring &amp; Alerting Architecture — AWS EKS</text>
+<text x="900" y="98" text-anchor="middle" class="sub">Metrics collection, alert evaluation, notification routing, dashboards and incident feedback</text>
+
+<!-- cluster -->
+<rect x="55" y="150" width="820" height="610" class="box" fill="#eff6ff" stroke="#2563eb"/>
+<text x="85" y="190" class="h">AWS VPC / EKS Cluster</text>
+<rect x="95" y="225" width="340" height="145" class="box" fill="#dbeafe" stroke="#3b82f6"/>
+<text x="265" y="262" text-anchor="middle" class="h">21 Microservices</text>
+<text x="265" y="298" text-anchor="middle" class="t">/metrics endpoint (where enabled)</text>
+<text x="265" y="330" text-anchor="middle" class="small">Request rate • errors • latency • business metrics</text>
+<rect x="485" y="225" width="330" height="145" class="box" fill="#e0f2fe" stroke="#0284c7"/>
+<text x="650" y="262" text-anchor="middle" class="h">Kubernetes / Node Metrics</text>
+<text x="650" y="298" text-anchor="middle" class="t">kube-state-metrics</text>
+<text x="650" y="330" text-anchor="middle" class="small">Node Exporter • kubelet / cAdvisor</text>
+<rect x="95" y="425" width="720" height="250" class="box" fill="#dcfce7" stroke="#16a34a"/>
+<text x="455" y="465" text-anchor="middle" class="h">Prometheus Server (or managed-compatible collector)</text>
+<rect x="125" y="500" width="195" height="115" class="box" fill="#bbf7d0" stroke="#16a34a"/>
+<text x="222" y="538" text-anchor="middle" class="h">Discovery</text><text x="222" y="572" text-anchor="middle" class="small">Kubernetes SD</text>
+<rect x="355" y="500" width="195" height="115" class="box" fill="#bbf7d0" stroke="#16a34a"/>
+<text x="452" y="538" text-anchor="middle" class="h">Scraping</text><text x="452" y="572" text-anchor="middle" class="small">Targets / intervals</text>
+<rect x="585" y="500" width="195" height="115" class="box" fill="#bbf7d0" stroke="#16a34a"/>
+<text x="682" y="538" text-anchor="middle" class="h">TSDB</text><text x="682" y="572" text-anchor="middle" class="small">PVC • retention</text>
+
+<!-- outside -->
+<rect x="970" y="150" width="775" height="240" class="box" fill="#fef3c7" stroke="#d97706"/>
+<text x="1357" y="190" text-anchor="middle" class="h">Alert Evaluation &amp; Routing</text>
+<rect x="1010" y="230" width="300" height="120" class="box" fill="#fde68a" stroke="#d97706"/>
+<text x="1160" y="270" text-anchor="middle" class="h">Prometheus Rules</text>
+<text x="1160" y="305" text-anchor="middle" class="small">Thresholds • ratios • burn rates</text>
+<rect x="1390" y="230" width="300" height="120" class="box" fill="#fed7aa" stroke="#ea580c"/>
+<text x="1540" y="270" text-anchor="middle" class="h">Alertmanager</text>
+<text x="1540" y="305" text-anchor="middle" class="small">Group • route • inhibit • silence</text>
+
+<rect x="970" y="465" width="775" height="295" class="box" fill="#f3e8ff" stroke="#9333ea"/>
+<text x="1357" y="505" text-anchor="middle" class="h">Operations &amp; Visualization</text>
+<rect x="1010" y="545" width="300" height="155" class="box" fill="#e9d5ff" stroke="#9333ea"/>
+<text x="1160" y="585" text-anchor="middle" class="h">Grafana</text>
+<text x="1160" y="620" text-anchor="middle" class="small">Service dashboards</text>
+<text x="1160" y="650" text-anchor="middle" class="small">SLO / capacity / trends</text>
+<rect x="1390" y="545" width="300" height="155" class="box" fill="#fce7f3" stroke="#db2777"/>
+<text x="1540" y="585" text-anchor="middle" class="h">On-call Channels</text>
+<text x="1540" y="620" text-anchor="middle" class="small">Email • chat • PagerDuty*</text>
+<text x="1540" y="650" text-anchor="middle" class="small">Runbook • Jira incident</text>
+
+<rect x="350" y="850" width="1100" height="170" class="box" fill="#e2e8f0" stroke="#64748b"/>
+<text x="900" y="895" text-anchor="middle" class="h">Incident Response &amp; Continuous Improvement</text>
+<text x="900" y="940" text-anchor="middle" class="t">Triage → mitigate → recover → validate → RCA → corrective actions</text>
+<text x="900" y="978" text-anchor="middle" class="small">Tune alerts • update dashboards/runbooks • review SLOs • reduce alert noise</text>
+
+<!-- arrows -->
+<path d="M265 370 V405 H452 V490" class="arrow"/>
+<path d="M650 370 V405 H452 V490" class="arrow"/>
+<path d="M320 557 H345" class="arrow"/>
+<path d="M550 557 H575" class="arrow"/>
+<path d="M780 557 H920 V290 H1000" class="arrow"/>
+<path d="M1310 290 H1380" class="arrow"/>
+<path d="M682 675 V790 H1160 V535" class="arrow"/>
+<path d="M1540 360 V535" class="arrow"/>
+<path d="M1540 710 V820 H1450 V840" class="arrow"/>
+<path d="M1160 710 V820 H900 V840" class="arrow"/>
+<path d="M350 935 H250 V780 H100" class="arrow dash"/>
+<text x="85" y="805" class="small">Feedback into engineering backlog</text>
+<text x="970" y="1080" class="small">*Use only the notification integrations configured in your environment.</text>
+</svg>
